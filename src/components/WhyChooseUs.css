@@ -3,34 +3,46 @@
 =================================== */
 
 .why-section{
-    padding:120px 6%;
-    background:#ffffff;
+    padding:clamp(70px,8vw,120px) 6%;
+    background:#fff;
 }
 
 .why-header{
     max-width:800px;
-    margin:auto;
+    margin:0 auto 70px;
     text-align:center;
-    margin-bottom:70px;
 }
 
 .why-header span{
     color:#8B1E3F;
+
     font-weight:700;
+
     letter-spacing:2px;
-    font-size:.9rem;
+
+    font-size:clamp(.8rem,1vw,.95rem);
 }
 
 .why-header h2{
     color:#082567;
-    font-size:3rem;
+
+    font-size:clamp(2rem,5vw,3rem);
+
     margin:15px 0 20px;
+
+    line-height:1.2;
 }
 
 .why-header p{
     color:#666;
-    font-size:1.1rem;
+
+    font-size:clamp(.95rem,1.5vw,1.1rem);
+
     line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
 }
 
 /* ===================================
@@ -39,10 +51,17 @@
 
 .why-grid{
     max-width:1300px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(280px,1fr)
+      );
+
     gap:30px;
 }
 
@@ -53,25 +72,32 @@
 .why-card{
     background:#fff;
 
-    padding:40px 30px;
+    padding:clamp(25px,3vw,40px);
 
-    border-radius:12px;
+    border-radius:16px;
 
     border-top:5px solid #8B1E3F;
 
     box-shadow:
       0 10px 30px rgba(0,0,0,.05);
 
-    transition:.35s ease;
+    transition:
+      transform .35s ease,
+      box-shadow .35s ease;
+
+    height:100%;
 }
 
 .why-card:hover{
     transform:translateY(-10px);
+
+    box-shadow:
+      0 18px 40px rgba(0,0,0,.08);
 }
 
 .icon-box{
-    width:70px;
-    height:70px;
+    width:clamp(60px,6vw,70px);
+    height:clamp(60px,6vw,70px);
 
     display:flex;
     align-items:center;
@@ -83,7 +109,7 @@
 
     color:#8B1E3F;
 
-    font-size:1.8rem;
+    font-size:clamp(1.4rem,2vw,1.8rem);
 
     margin-bottom:25px;
 }
@@ -91,7 +117,7 @@
 .why-card h3{
     color:#082567;
 
-    font-size:1.4rem;
+    font-size:clamp(1.1rem,2vw,1.4rem);
 
     margin-bottom:15px;
 }
@@ -100,38 +126,30 @@
     color:#666;
 
     line-height:1.8;
+
+    font-size:clamp(.9rem,1.2vw,1rem);
 }
 
 /* ===================================
-   TABLET
+   MOBILE ONLY
 =================================== */
 
-@media(max-width:992px){
-
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why-header h2{
-        font-size:2.5rem;
-    }
-}
-
-/* ===================================
-   MOBILE
-=================================== */
-
-@media(max-width:768px){
-
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .why-header h2{
-        font-size:2rem;
-    }
+@media (max-width:768px){
 
     .why-section{
-        padding:80px 5%;
+        padding-inline:5%;
+    }
+
+    .why-header{
+        margin-bottom:50px;
+    }
+
+    .why-card{
+        text-align:center;
+    }
+
+    .icon-box{
+        margin-left:auto;
+        margin-right:auto;
     }
 }
