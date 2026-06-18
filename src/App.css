@@ -1,306 +1,98 @@
-/* ==========================================
-   GOOGLE FONT
-========================================== */
+/* ===================================
+   APP.CSS
+=================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Reset root container */
 
-/* ==========================================
-   CSS VARIABLES
-========================================== */
-
-:root{
-  --primary:#0A2E73;
-  --secondary:#1E88E5;
-  --accent:#4FC3F7;
-  --gold:#F4B400;
-  --success:#00A86B;
-
-  --white:#FFFFFF;
-  --black:#000000;
-
-  --text:#1B263B;
-  --text-light:#6B7280;
-
-  --bg:#FFFFFF;
-  --bg-light:#F7FAFD;
-
-  --shadow:
-    0 10px 30px rgba(0,0,0,.08);
-
-  --radius:16px;
-
-  --container:1400px;
-
-  --section-padding:
-    clamp(70px,8vw,120px);
+#root{
+    width:100%;
+    min-height:100vh;
+    margin:0;
+    padding:0;
 }
 
-/* ==========================================
-   RESET
-========================================== */
+/* Main app wrapper */
 
-*,
-*::before,
-*::after{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+.App{
+    width:100%;
+    min-height:100vh;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+/* Remove any inherited width restrictions */
 
 html,
-body,
-#root{
-  width:100%;
-  min-height:100%;
-  overflow-x:hidden;
-}/* ==========================================
-   RESPONSIVE SAFETY
-========================================== */
-
-html,
-body,
-#root{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
-}
-
-/* Prevent elements from causing overflow */
-section,
-div,
-article,
-aside,
-main,
-header,
-footer,
-nav{
-  max-width:100%;
-}
-
-/* Images and media */
-img,
-picture,
-video,
-canvas,
-svg,
-iframe{
-  max-width:100%;
-  height:auto;
-}
-
-/* Flexbox overflow fix */
-.flex,
-.hero-buttons,
-.nav-menu{
-  min-width:0;
-}
-
-/* Grid overflow fix */
-[class*="grid"] > *,
-.why-grid > *{
-  min-width:0;
-}
-
-/* Long text won't break layouts */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a{
-  overflow-wrap:break-word;
-  word-break:break-word;
-}
-
-/* ==========================================
-   BODY
-========================================== */
-
 body{
-  font-family:'Poppins',sans-serif;
-
-  background:var(--bg);
-
-  color:var(--text);
-
-  line-height:1.6;
-
-  text-rendering:optimizeLegibility;
-
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 }
 
-/* ==========================================
-   TYPOGRAPHY
-========================================== */
+/* Ensure all sections fill available width */
 
-h1{
-  font-size:clamp(2.2rem,6vw,5rem);
-  line-height:1.1;
+section{
+    width:100%;
 }
 
-h2{
-  font-size:clamp(1.8rem,4vw,3rem);
-  line-height:1.2;
-}
-
-h3{
-  font-size:clamp(1.2rem,2vw,1.8rem);
-  line-height:1.3;
-}
-
-p{
-  font-size:clamp(.95rem,1.2vw,1.05rem);
-}
-
-/* ==========================================
-   LINKS
-========================================== */
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* ==========================================
-   LISTS
-========================================== */
-
-ul,
-ol{
-  list-style:none;
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-button{
-  border:none;
-  outline:none;
-  cursor:pointer;
-  font-family:inherit;
-  background:none;
-}
-
-/* ==========================================
-   IMAGES
-========================================== */
-
-img,
-picture,
-video,
-canvas,
-svg{
-  display:block;
-  max-width:100%;
-}
+/* Images */
 
 img{
-  height:auto;
+    max-width:100%;
+    height:auto;
+    display:block;
 }
 
-/* ==========================================
-   FORMS
-========================================== */
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Buttons */
+
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font:inherit;
+}
+
+/* Forms */
 
 input,
 textarea,
-select,
-button{
-  font:inherit;
+select{
+    font:inherit;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-  outline:none;
+/* Remove Vite defaults completely */
+
+/*
+DELETE IF PRESENT:
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* ==========================================
-   SECTIONS
-========================================== */
-
-section{
-  width:100%;
+.logo {
+  height: 6em;
+  padding: 1.5em;
 }
 
-.container{
-  width:min(92%, var(--container));
-  margin-inline:auto;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-/* ==========================================
-   TABLES
-========================================== */
-
-table{
-  width:100%;
-  border-collapse:collapse;
+.card {
+  padding: 2em;
 }
 
-/* ==========================================
-   SCROLLBAR
-========================================== */
-
-::-webkit-scrollbar{
-  width:8px;
+.read-the-docs {
+  color: #888;
 }
-
-::-webkit-scrollbar-track{
-  background:#f1f1f1;
-}
-
-::-webkit-scrollbar-thumb{
-  background:var(--primary);
-  border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background:var(--gold);
-}
-
-/* ==========================================
-   TEXT SELECTION
-========================================== */
-
-::selection{
-  background:var(--gold);
-  color:var(--primary);
-}
-
-/* ==========================================
-   VITE ROOT FIX
-========================================== */
-
-#root{
-  width:100%;
-  margin:0;
-  padding:0;
-}
-
-/* ==========================================
-   MOBILE OPTIMIZATION
-========================================== */
-
-@media (max-width:768px){
-
-  html{
-    font-size:15px;
-  }
-
-}
+*/

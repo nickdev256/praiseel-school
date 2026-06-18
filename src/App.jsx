@@ -6,6 +6,7 @@ import Admissions from "./pages/Admissions";
 import ApplyOnline from "./pages/ApplyOnline";
 import GalleryPage from "./pages/GalleryPage";
 import ContactPage from "./pages/ContactPage";
+import "./App.css";
 
 function App() {
   return (
