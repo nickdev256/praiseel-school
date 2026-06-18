@@ -11,24 +11,27 @@
     z-index:1001;
 
     display:flex;
-    justify-content:flex-start;
+    justify-content:space-between;
     align-items:center;
 
-    padding:8px 6%;
+    padding:10px 6%;
 
     background:rgba(0,0,0,.25);
 
-    color:white;
-    font-size:.9rem;
+    color:#fff;
+
+    font-size:clamp(.75rem,1vw,.9rem);
     font-weight:500;
 }
 
-.topbar-left{
+.topbar-left,
+.topbar-right{
     display:flex;
-    gap:30px;
+    align-items:center;
+    gap:25px;
 }
 
-.topbar-left span{
+.topbar span{
     display:flex;
     align-items:center;
     gap:8px;
@@ -49,6 +52,7 @@
 
     display:grid;
     grid-template-columns:auto 1fr auto;
+
     align-items:center;
 
     padding:15px 6%;
@@ -63,17 +67,21 @@
 .logo-section{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:15px;
+
     text-decoration:none;
 }
 
 .logo-section img{
-    width:120px;
-    height:120px;
+    width:clamp(70px,8vw,120px);
+    height:clamp(70px,8vw,120px);
+
     object-fit:contain;
 
     filter:
-      drop-shadow(0 6px 15px rgba(0,0,0,.25));
+      drop-shadow(
+        0 6px 15px rgba(0,0,0,.25)
+      );
 
     transition:.3s ease;
 }
@@ -89,12 +97,14 @@
 }
 
 .school-info h2{
-    color:#ffffff;
+    color:#fff;
 
-    font-size:2rem;
+    font-size:clamp(1rem,2vw,2rem);
+
     font-weight:800;
 
     line-height:1.1;
+
     margin-bottom:6px;
 
     text-shadow:
@@ -104,7 +114,8 @@
 .school-info span{
     color:#F4B400;
 
-    font-size:1rem;
+    font-size:clamp(.7rem,1vw,1rem);
+
     font-weight:700;
 
     letter-spacing:.5px;
@@ -119,21 +130,25 @@
 
 .nav-menu{
     display:flex;
+
     justify-self:center;
     align-items:center;
-    gap:35px;
+
+    gap:clamp(15px,2vw,35px);
 }
 
 .nav-menu a{
-    color:white;
+    color:#fff;
+
     text-decoration:none;
 
-    font-size:1rem;
+    font-size:clamp(.9rem,1vw,1rem);
+
     font-weight:600;
 
     position:relative;
 
-    transition:.3s;
+    transition:.3s ease;
 }
 
 .nav-menu a:hover{
@@ -172,11 +187,15 @@
 
     text-decoration:none;
 
-    padding:16px 38px;
+    padding:
+      clamp(12px,2vw,16px)
+      clamp(24px,4vw,38px);
 
     border-radius:50px;
 
-    font-size:1rem;
+    font-size:
+      clamp(.9rem,1vw,1rem);
+
     font-weight:700;
 
     transition:.3s ease;
@@ -184,7 +203,6 @@
 
 .enroll-btn:hover{
     transform:translateY(-3px);
-
     background:#ffd04a;
 }
 
@@ -197,43 +215,24 @@
 }
 
 /* ======================
-   HAMBURGER
+   MENU ICON
 ====================== */
 
 .menu-icon{
     display:none;
 
-    color:white;
+    color:#fff;
+
     font-size:2rem;
 
     cursor:pointer;
 }
 
 /* ======================
-   TABLET
+   MOBILE & TABLET
 ====================== */
 
-@media(max-width:1200px){
-
-    .logo-section img{
-        width:100px;
-        height:100px;
-    }
-
-    .school-info h2{
-        font-size:1.5rem;
-    }
-
-    .nav-menu{
-        gap:25px;
-    }
-}
-
-/* ======================
-   MOBILE
-====================== */
-
-@media(max-width:992px){
+@media (max-width:992px){
 
     .topbar{
         display:none;
@@ -258,7 +257,8 @@
         top:0;
         right:-100%;
 
-        width:320px;
+        width:min(85vw,320px);
+
         height:100vh;
 
         background:#0A2E73;
@@ -269,7 +269,9 @@
         justify-content:flex-start;
         align-items:flex-start;
 
-        padding:120px 40px;
+        gap:25px;
+
+        padding:120px 35px;
 
         transition:.4s ease;
 
@@ -281,62 +283,45 @@
     }
 
     .nav-menu a{
-        font-size:1.1rem;
+        font-size:1rem;
     }
 
     .mobile-btn{
         display:block;
 
         background:#F4B400;
+
         color:#0A2E73 !important;
 
-        padding:15px 30px;
+        padding:14px 28px;
 
         border-radius:50px;
 
         font-weight:700;
 
-        margin-top:20px;
+        margin-top:10px;
     }
-
-    .logo-section img{
-        width:90px;
-        height:90px;
-    }
-
-    .school-info h2{
-        font-size:1.3rem;
-    }
-
-    .school-info span{
-        font-size:.9rem;
-    }
-}
-
-/* ======================
-   SMALL MOBILE
-====================== */
-
-@media(max-width:600px){
 
     .logo-section{
         gap:10px;
     }
+}
 
-    .logo-section img{
-        width:75px;
-        height:75px;
-    }
+/* ======================
+   SMALL PHONES
+====================== */
+
+@media (max-width:480px){
 
     .school-info h2{
-        font-size:1rem;
+        font-size:.95rem;
     }
 
     .school-info span{
-        font-size:.75rem;
+        font-size:.7rem;
     }
 
     .nav-menu{
-        width:280px;
+        width:100%;
     }
 }
