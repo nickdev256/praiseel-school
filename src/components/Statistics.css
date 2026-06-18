@@ -1,0 +1,121 @@
+/* =========================
+   STATISTICS SECTION
+========================= */
+
+.stats-section{
+    background:#082567;
+
+    padding:120px 6%;
+}
+
+.stats-header{
+    text-align:center;
+
+    max-width:800px;
+
+    margin:0 auto 70px;
+}
+
+.stats-header span{
+    color:#F4B400;
+
+    font-size:.9rem;
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.stats-header h2{
+    color:white;
+
+    font-size:3rem;
+
+    margin:15px 0;
+}
+
+.stats-header p{
+    color:rgba(255,255,255,.8);
+
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.stats-grid{
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.stat-card{
+    background:white;
+
+    padding:45px 25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.35s ease;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+}
+
+.stat-card h3{
+    color:#8B1E3F;
+
+    font-size:3.5rem;
+
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#555;
+
+    font-size:1.05rem;
+    font-weight:600;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-header h2{
+        font-size:2.5rem;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .stats-section{
+        padding:90px 5%;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-header h2{
+        font-size:2rem;
+    }
+
+    .stat-card h3{
+        font-size:3rem;
+    }
+}

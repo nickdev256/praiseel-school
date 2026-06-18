@@ -1,0 +1,137 @@
+/* ===================================
+   WHY CHOOSE US
+=================================== */
+
+.why-section{
+    padding:120px 6%;
+    background:#ffffff;
+}
+
+.why-header{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.why-header span{
+    color:#8B1E3F;
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:.9rem;
+}
+
+.why-header h2{
+    color:#082567;
+    font-size:3rem;
+    margin:15px 0 20px;
+}
+
+.why-header p{
+    color:#666;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* ===================================
+   GRID
+=================================== */
+
+.why-grid{
+    max-width:1300px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.why-card{
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:12px;
+
+    border-top:5px solid #8B1E3F;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.icon-box{
+    width:70px;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#f8f2f4;
+
+    color:#8B1E3F;
+
+    font-size:1.8rem;
+
+    margin-bottom:25px;
+}
+
+.why-card h3{
+    color:#082567;
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(max-width:992px){
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-header h2{
+        font-size:2.5rem;
+    }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-header h2{
+        font-size:2rem;
+    }
+
+    .why-section{
+        padding:80px 5%;
+    }
+}

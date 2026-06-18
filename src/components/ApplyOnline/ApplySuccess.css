@@ -1,0 +1,52 @@
+.success-section{
+    padding:120px 8%;
+    background:#f8f9fc;
+}
+
+.success-card{
+    max-width:700px;
+    margin:auto;
+
+    background:white;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.success-icon{
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#8B1E3F;
+
+    color:white;
+
+    font-size:2rem;
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+.success-card h2{
+    color:#082567;
+    margin-bottom:20px;
+}
+
+.success-card p{
+    color:#666;
+    line-height:2;
+}

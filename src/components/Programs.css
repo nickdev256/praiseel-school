@@ -1,0 +1,168 @@
+.programs-section{
+    padding:120px 6%;
+    background:#fff;
+}
+
+.programs-header{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 80px;
+}
+
+.programs-header span{
+    color:#8B1E3F;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.programs-header h2{
+    color:#082567;
+    font-size:3rem;
+    margin:15px 0;
+}
+
+.programs-header p{
+    color:#666;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.programs-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+
+    max-width:1300px;
+    margin:auto;
+}
+
+.program-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.reverse .program-image{
+    order:2;
+}
+
+.reverse .program-info{
+    order:1;
+}
+
+.program-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.program-info{
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.program-info span{
+    color:#8B1E3F;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.program-info h3{
+    color:#082567;
+    font-size:2.4rem;
+    margin:15px 0;
+}
+
+.program-info p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.program-info ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.program-info li{
+    margin-bottom:12px;
+    color:#444;
+    font-weight:500;
+}
+
+.program-info li::before{
+    content:"✓";
+    color:#8B1E3F;
+    margin-right:10px;
+    font-weight:700;
+}
+
+.program-info button{
+    width:max-content;
+
+    background:#8B1E3F;
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.program-info button:hover{
+    background:#082567;
+}
+
+@media(max-width:992px){
+
+    .program-card{
+        grid-template-columns:1fr;
+    }
+
+    .reverse .program-image,
+    .reverse .program-info{
+        order:unset;
+    }
+
+    .program-info{
+        padding:35px;
+    }
+
+    .programs-header h2{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .programs-section{
+        padding:90px 5%;
+    }
+
+    .program-info h3{
+        font-size:1.8rem;
+    }
+
+    .program-info{
+        padding:25px;
+    }
+}

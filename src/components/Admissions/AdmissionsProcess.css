@@ -1,0 +1,31 @@
+.process{
+    padding:100px 8%;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.step{
+    text-align:center;
+}
+
+.step span{
+    width:80px;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:auto;
+
+    background:#8B1E3F;
+    color:white;
+
+    border-radius:50%;
+    font-size:1.5rem;
+    font-weight:700;
+}

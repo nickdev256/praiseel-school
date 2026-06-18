@@ -1,0 +1,57 @@
+.apply-form-section{
+    padding:100px 8%;
+    background:#f8f9fc;
+}
+
+.apply-form-card{
+    max-width:1100px;
+    margin:auto;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.apply-form{
+    display:grid;
+    gap:20px;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea{
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:1rem;
+}
+
+.upload-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.apply-form button{
+    background:#8B1E3F;
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:50px;
+
+    font-weight:700;
+    cursor:pointer;
+}
