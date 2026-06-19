@@ -5,7 +5,7 @@ import {
   FaGraduationCap,
   FaShieldAlt,
   FaUsers,
-  FaTrophy
+  FaTrophy,
 } from "react-icons/fa";
 
 import "./Hero.css";
@@ -82,6 +82,7 @@ function Hero() {
   return (
     <section className="hero">
 
+      {/* BACKGROUND IMAGES */}
       {slides.map((slide, index) => (
         <img
           key={index}
@@ -93,8 +94,10 @@ function Hero() {
         />
       ))}
 
+      {/* OVERLAY */}
       <div className="overlay"></div>
 
+      {/* ARROWS */}
       <button
         className="slider-arrow left"
         onClick={prevSlide}
@@ -109,11 +112,12 @@ function Hero() {
         ❯
       </button>
 
+      {/* HERO CONTENT */}
       <div className="hero-content">
 
         <div className="hero-badge">
           <FaGraduationCap />
-          Admissions Open For 2026
+          <span>ADMISSIONS OPEN FOR 2026</span>
         </div>
 
         <div
@@ -141,7 +145,10 @@ function Hero() {
             className="btn-primary"
           >
             Apply Now
-            <FaArrowRight />
+
+            <span className="btn-icon">
+              <FaArrowRight />
+            </span>
           </Link>
 
           <Link
@@ -149,69 +156,90 @@ function Hero() {
             className="btn-secondary"
           >
             Discover More
-            <FaArrowRight />
+
+            <span className="btn-icon">
+              <FaArrowRight />
+            </span>
           </Link>
 
         </div>
 
       </div>
 
+      {/* FEATURES BAR */}
       <div className="hero-features">
 
         <div className="feature-card">
+
           <div className="feature-icon">
             <FaGraduationCap />
           </div>
 
-          <div>
+          <div className="feature-content">
             <h4>Quality Education</h4>
             <p>
               Strong academic foundation
             </p>
           </div>
+
         </div>
 
+        <div className="feature-divider"></div>
+
         <div className="feature-card">
+
           <div className="feature-icon">
             <FaShieldAlt />
           </div>
 
-          <div>
+          <div className="feature-content">
             <h4>Safe Environment</h4>
             <p>
-              Secure and caring learning space
+              A secure and caring learning space
             </p>
           </div>
+
         </div>
 
+        <div className="feature-divider"></div>
+
         <div className="feature-card">
+
           <div className="feature-icon">
             <FaUsers />
           </div>
 
-          <div>
+          <div className="feature-content">
             <h4>Holistic Growth</h4>
             <p>
-              Character, confidence & creativity
+              Building character,
+              confidence & creativity
             </p>
           </div>
+
         </div>
 
+        <div className="feature-divider"></div>
+
         <div className="feature-card">
+
           <div className="feature-icon">
             <FaTrophy />
           </div>
 
-          <div>
+          <div className="feature-content">
             <h4>Excellence Always</h4>
             <p>
-              Preparing leaders of tomorrow
+              Preparing leaders
+              of tomorrow
             </p>
           </div>
+
         </div>
 
       </div>
 
+      {/* DOTS */}
       <div className="slider-dots">
         {slides.map((_, index) => (
           <span
@@ -220,7 +248,7 @@ function Hero() {
               setCurrentSlide(index)
             }
             className={`dot ${
-              index === currentSlide
+              currentSlide === index
                 ? "active-dot"
                 : ""
             }`}
