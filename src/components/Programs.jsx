@@ -14,7 +14,7 @@ import {
 import "./Programs.css";
 
 import nurseryImg from "../assets/nursery.jpg";
-import primaryImg from "../assets/primary.jpg";
+import primaryImg from "../assets/p.jpg";
 
 function Programs() {
   return (
