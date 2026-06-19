@@ -31,13 +31,13 @@
 
 .navbar {
   position: absolute;
-  top: 65px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
 
   width: 97%;
   max-width: 1500px;
-  height: 140px;
+  height: 100px;
 
   z-index: 1000;
 
