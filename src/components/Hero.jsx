@@ -1,9 +1,6 @@
 import React from "react";
 import "./Hero.css";
 import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaArrowRight,
   FaGraduationCap,
   FaShieldAlt,
@@ -11,8 +8,7 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-import heroBg from "../assets/hero2.jpg";
-import logo from "../assets/logo.png";
+import heroBg from "../assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
@@ -20,52 +16,6 @@ const Hero = () => {
       className="hero"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
-      {/* TOP BAR */}
-      <div className="topbar">
-        <div className="topbar-left">
-          <span>
-            <FaPhoneAlt /> 0744 523 317
-          </span>
-
-          <span>
-            <FaEnvelope /> info@praiseel.ac.ug
-          </span>
-        </div>
-
-        <div className="topbar-right">
-          <FaMapMarkerAlt /> Kokoola-Kalagi, Mukono
-        </div>
-      </div>
-
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="logo-section">
-          <img src={logo} alt="logo" />
-
-          <div className="school-info">
-            <h2>Praise-El Junior School</h2>
-            <p>Aspiring For Excellence</p>
-          </div>
-        </div>
-
-        <ul className="nav-links">
-          <li className="active">Home</li>
-          <li>About Us</li>
-          <li>Admissions</li>
-          <li>Gallery</li>
-          <li>Contact Us</li>
-          <li>Apply Online</li>
-        </ul>
-
-        <button className="enroll-btn">
-          Enroll Now
-          <span>
-            <FaArrowRight />
-          </span>
-        </button>
-      </nav>
-
-      {/* HERO CONTENT */}
       <div className="hero-content">
         <div className="admission-badge">
           <FaGraduationCap />
@@ -103,7 +53,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* FEATURES */}
       <div className="features-container">
         <div className="feature-item">
           <div className="feature-icon">
