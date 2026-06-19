@@ -119,16 +119,6 @@ function Footer() {
               0756 070 601
             </a>
 
-            <a href="tel:0758028596">
-              <FaPhoneAlt />
-              0758 028 596
-            </a>
-
-            <a href="tel:0752446049">
-              <FaPhoneAlt />
-              0752 446 049
-            </a>
-
             <a href="mailto:info@praiseel.ac.ug">
               <FaEnvelope />
               info@praiseel.ac.ug
