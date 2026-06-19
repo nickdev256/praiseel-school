@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import "./Hero.css";
 import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
   FaArrowRight,
   FaGraduationCap,
   FaShieldAlt,
@@ -8,256 +11,152 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-import "./Hero.css";
+import heroBg from "../assets/hero-bg.jpg";
+import logo from "../assets/logo.png";
 
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.jpg";
-import hero5 from "../assets/hero5.jpg";
-
-function Hero() {
-  const slides = [
-    {
-      image: hero1,
-      title: "Aspiring For",
-      highlight: "Excellence",
-      subtitle:
-        "Nurturing Future Leaders Through Quality Education",
-    },
-    {
-      image: hero2,
-      title: "Learning",
-      highlight: "Beyond",
-      subtitle:
-        "Building Creativity, Confidence & Character",
-    },
-    {
-      image: hero3,
-      title: "Safe & Caring",
-      highlight: "Environment",
-      subtitle:
-        "Every Child Matters At Praise-El Junior School",
-    },
-    {
-      image: hero4,
-      title: "Academic",
-      highlight: "Excellence",
-      subtitle:
-        "Strong Foundations For Lifelong Success",
-    },
-    {
-      image: hero5,
-      title: "Growing",
-      highlight: "Together",
-      subtitle:
-        "Developing Responsible Citizens Of Tomorrow",
-    },
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) =>
-        prev === slides.length - 1 ? 0 : prev + 1
-      );
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
+const Hero = () => {
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
+      {/* TOP BAR */}
+      <div className="topbar">
+        <div className="topbar-left">
+          <span>
+            <FaPhoneAlt /> 0744 523 317
+          </span>
 
-      {/* BACKGROUND IMAGES */}
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide.image}
-          alt={slide.title}
-          className={`hero-bg ${
-            index === currentSlide ? "active" : ""
-          }`}
-        />
-      ))}
+          <span>
+            <FaEnvelope /> info@praiseel.ac.ug
+          </span>
+        </div>
 
-      {/* OVERLAY */}
-      <div className="overlay"></div>
+        <div className="topbar-right">
+          <FaMapMarkerAlt /> Kokoola-Kalagi, Mukono
+        </div>
+      </div>
 
-      {/* ARROWS */}
-      <button
-        className="slider-arrow left"
-        onClick={prevSlide}
-      >
-        ❮
-      </button>
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <div className="logo-section">
+          <img src={logo} alt="logo" />
 
-      <button
-        className="slider-arrow right"
-        onClick={nextSlide}
-      >
-        ❯
-      </button>
+          <div className="school-info">
+            <h2>Praise-El Junior School</h2>
+            <p>Aspiring For Excellence</p>
+          </div>
+        </div>
+
+        <ul className="nav-links">
+          <li className="active">Home</li>
+          <li>About Us</li>
+          <li>Admissions</li>
+          <li>Gallery</li>
+          <li>Contact Us</li>
+          <li>Apply Online</li>
+        </ul>
+
+        <button className="enroll-btn">
+          Enroll Now
+          <span>
+            <FaArrowRight />
+          </span>
+        </button>
+      </nav>
 
       {/* HERO CONTENT */}
       <div className="hero-content">
-
-        <div className="hero-badge">
+        <div className="admission-badge">
           <FaGraduationCap />
           <span>ADMISSIONS OPEN FOR 2026</span>
         </div>
 
-        <div
-          key={currentSlide}
-          className="hero-text"
-        >
-          <h1>
-            {slides[currentSlide].title}
-            <span>
-              {slides[currentSlide].highlight}
-            </span>
-          </h1>
+        <h1>
+          Aspiring For
+          <br />
+          <span>Excellence</span>
+        </h1>
 
-          <div className="hero-line"></div>
+        <div className="yellow-line"></div>
 
-          <p>
-            {slides[currentSlide].subtitle}
-          </p>
-        </div>
+        <p>
+          Nurturing Future Leaders Through
+          <br />
+          Quality Education
+        </p>
 
         <div className="hero-buttons">
-
-          <Link
-            to="/admissions"
-            className="btn-primary"
-          >
+          <button className="apply-btn">
             Apply Now
-
-            <span className="btn-icon">
+            <span>
               <FaArrowRight />
             </span>
-          </Link>
+          </button>
 
-          <Link
-            to="/about"
-            className="btn-secondary"
-          >
+          <button className="discover-btn">
             Discover More
-
-            <span className="btn-icon">
+            <span>
               <FaArrowRight />
             </span>
-          </Link>
-
+          </button>
         </div>
-
       </div>
 
-      {/* FEATURES BAR */}
-      <div className="hero-features">
-
-        <div className="feature-card">
-
+      {/* FEATURES */}
+      <div className="features-container">
+        <div className="feature-item">
           <div className="feature-icon">
             <FaGraduationCap />
           </div>
 
-          <div className="feature-content">
+          <div>
             <h4>Quality Education</h4>
-            <p>
-              Strong academic foundation
-            </p>
+            <p>Strong academic foundation</p>
           </div>
-
         </div>
 
-        <div className="feature-divider"></div>
+        <div className="divider"></div>
 
-        <div className="feature-card">
-
+        <div className="feature-item">
           <div className="feature-icon">
             <FaShieldAlt />
           </div>
 
-          <div className="feature-content">
+          <div>
             <h4>Safe Environment</h4>
-            <p>
-              A secure and caring learning space
-            </p>
+            <p>A secure and caring learning space</p>
           </div>
-
         </div>
 
-        <div className="feature-divider"></div>
+        <div className="divider"></div>
 
-        <div className="feature-card">
-
+        <div className="feature-item">
           <div className="feature-icon">
             <FaUsers />
           </div>
 
-          <div className="feature-content">
+          <div>
             <h4>Holistic Growth</h4>
-            <p>
-              Building character,
-              confidence & creativity
-            </p>
+            <p>Building character confidence & creativity</p>
           </div>
-
         </div>
 
-        <div className="feature-divider"></div>
+        <div className="divider"></div>
 
-        <div className="feature-card">
-
+        <div className="feature-item">
           <div className="feature-icon">
             <FaTrophy />
           </div>
 
-          <div className="feature-content">
+          <div>
             <h4>Excellence Always</h4>
-            <p>
-              Preparing leaders
-              of tomorrow
-            </p>
+            <p>Preparing leaders of tomorrow</p>
           </div>
-
         </div>
-
       </div>
-
-      {/* DOTS */}
-      <div className="slider-dots">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            onClick={() =>
-              setCurrentSlide(index)
-            }
-            className={`dot ${
-              currentSlide === index
-                ? "active-dot"
-                : ""
-            }`}
-          />
-        ))}
-      </div>
-
     </section>
   );
-}
+};
 
 export default Hero;
