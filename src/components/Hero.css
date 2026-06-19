@@ -149,25 +149,24 @@
 
 .features-container{
   position:absolute;
-
   left:50%;
-  
-
   transform:translateX(-50%);
 
   width:90%;
-   bottom:60px;
-  height:120px;
+  max-width:1370px;
+
+  bottom:20px;      /* was 60px */
+  height:135px;     /* was 120px */
 
   z-index:5;
 
-  background:rgba(0,20,90,.72);
-  backdrop-filter:blur(14px);
+  background:rgba(2,25,96,.78);
+  backdrop-filter:blur(15px);
 
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:32px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:35px;
 
-  padding:0 40px;
+  padding:0 35px;
 
   display:flex;
   justify-content:space-between;
@@ -183,12 +182,11 @@
 }
 
 .feature-icon{
-  width:60px;
-  height:60px;
-  font-size:22px;
+  width:72px;
+  height:72px;
+  font-size:26px;
 
   border-radius:50%;
-
   background:#072b91;
 
   display:flex;
