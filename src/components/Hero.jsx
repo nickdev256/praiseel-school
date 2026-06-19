@@ -17,12 +17,12 @@ function Hero() {
     },
     {
       image: hero2,
-      title: "Learning Beyond The Classroom",
+      title: "Learning Beyond",
       subtitle: "Building Creativity, Confidence & Character",
     },
     {
       image: hero3,
-      title: "A Safe & Caring Environment",
+      title: "Safe & Caring Environment",
       subtitle: "Every Child Matters At Praise-El Junior School",
     },
     {
@@ -47,7 +47,7 @@ function Hero() {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) =>
@@ -63,17 +63,14 @@ function Hero() {
 
   return (
     <section className="hero">
-
       {slides.map((slide, index) => (
         <img
           key={index}
           src={slide.image}
           alt={slide.title}
-          className={
-            index === currentSlide
-              ? "hero-bg active"
-              : "hero-bg"
-          }
+          className={`hero-bg ${
+            index === currentSlide ? "active" : ""
+          }`}
         />
       ))}
 
@@ -82,6 +79,7 @@ function Hero() {
       <button
         className="slider-arrow left"
         onClick={prevSlide}
+        aria-label="Previous Slide"
       >
         ❮
       </button>
@@ -89,26 +87,22 @@ function Hero() {
       <button
         className="slider-arrow right"
         onClick={nextSlide}
+        aria-label="Next Slide"
       >
         ❯
       </button>
 
       <div className="hero-content">
-
         <span className="hero-badge">
           Admissions Open For 2026
         </span>
 
-        <h1>
-          {slides[currentSlide].title}
-        </h1>
-
-        <p>
-          {slides[currentSlide].subtitle}
-        </p>
+        <div key={currentSlide} className="hero-text">
+          <h1>{slides[currentSlide].title}</h1>
+          <p>{slides[currentSlide].subtitle}</p>
+        </div>
 
         <div className="hero-buttons">
-
           <Link
             to="/admissions"
             className="btn-primary"
@@ -122,24 +116,22 @@ function Hero() {
           >
             Discover More
           </Link>
-
         </div>
-
       </div>
 
       <div className="slider-dots">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={
+            onClick={() => setCurrentSlide(index)}
+            className={`dot ${
               index === currentSlide
-                ? "dot active-dot"
-                : "dot"
-            }
+                ? "active-dot"
+                : ""
+            }`}
           />
         ))}
       </div>
-
     </section>
   );
 }
