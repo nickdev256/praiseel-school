@@ -7,8 +7,8 @@
 }
 
 .hero{
-  height:950px;
-  min-height:950px;
+  height:1050px;
+  min-height:1050px;
   background-size:cover;
   background-position:center;
   position:relative;
@@ -33,9 +33,8 @@
 .hero-content{
   position:relative;
   z-index:5;
-
-  max-width:780px;
-  padding-top:130px;
+   max-width:780px;
+  padding-top:260px;
   padding-left:80px;
   
 }
