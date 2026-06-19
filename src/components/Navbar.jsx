@@ -1,44 +1,42 @@
-import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
-  FaBars,
-  FaTimes,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaArrowRight
+  FaArrowRight,
+  FaBars,
 } from "react-icons/fa";
 
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <>
       {/* TOP BAR */}
       <div className="topbar">
 
         <div className="topbar-left">
+
           <span>
             <FaPhoneAlt />
-            0744523317
+            0744 523 317
           </span>
 
           <span>
             <FaEnvelope />
             info@praiseel.ac.ug
           </span>
+
         </div>
 
         <div className="topbar-right">
+
           <span>
             <FaMapMarkerAlt />
             Kokoola-Kalagi, Mukono
           </span>
+
         </div>
 
       </div>
@@ -56,88 +54,91 @@ function Navbar() {
           />
 
           <div className="school-info">
-            <h2>Praise-El Junior School</h2>
-            <span>Aspiring For Excellence</span>
+
+            <h2>
+              Praise-El Junior School
+            </h2>
+
+            <span>
+              Aspiring For Excellence
+            </span>
+
           </div>
+
         </Link>
 
-        <nav
-          className={
-            menuOpen
-              ? "nav-menu active"
-              : "nav-menu"
-          }
-        >
+        <nav className="nav-menu">
+
           <NavLink
             to="/"
-            onClick={closeMenu}
+            end
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
             Home
           </NavLink>
 
           <NavLink
             to="/about"
-            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
             About Us
           </NavLink>
 
           <NavLink
             to="/admissions"
-            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
             Admissions
           </NavLink>
 
           <NavLink
             to="/gallery"
-            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
             Gallery
           </NavLink>
 
           <NavLink
             to="/contact"
-            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
-            Contact
+            Contact Us
           </NavLink>
 
           <NavLink
             to="/apply-online"
-            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive ? "active" : ""
+            }
           >
             Apply Online
           </NavLink>
 
-          <Link
-            to="/admissions"
-            className="mobile-btn"
-            onClick={closeMenu}
-          >
-            Enroll Now
-          </Link>
         </nav>
 
         <Link
           to="/admissions"
           className="enroll-btn"
         >
-          Enroll Now
-          <FaArrowRight />
+          <span>Enroll Now</span>
+
+          <div className="btn-circle">
+            <FaArrowRight />
+          </div>
         </Link>
 
-        <div
-          className="menu-icon"
-          onClick={() =>
-            setMenuOpen(!menuOpen)
-          }
-        >
-          {menuOpen ? (
-            <FaTimes />
-          ) : (
-            <FaBars />
-          )}
+        <div className="mobile-menu">
+          <FaBars />
         </div>
 
       </header>
