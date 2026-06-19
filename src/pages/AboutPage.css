@@ -8,8 +8,8 @@
 
 .about-page{
   font-family:"Poppins",sans-serif;
+  background:#f8f9fc;
   overflow:hidden;
-  background:#f7f9fc;
 }
 
 /* ===================================
@@ -17,20 +17,554 @@
 =================================== */
 
 .about-hero{
-  height:80vh;
+  position:relative;
+  min-height:95vh;
+
   background-size:cover;
   background-position:center;
+
+  overflow:hidden;
+}
+
+.hero-overlay{
+  position:relative;
+
+  min-height:95vh;
+
+  background:
+  linear-gradient(
+    rgba(2,20,70,.82),
+    rgba(2,20,70,.82)
+  );
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+}
+
+.hero-logo{
+  position:absolute;
+
+  top:40px;
+  left:8%;
+
+  width:110px;
+  z-index:3;
+}
+
+.hero-content{
+  max-width:850px;
+  z-index:2;
+}
+
+.hero-content span{
+  color:#f4b400;
+
+  font-size:1.4rem;
+  font-weight:700;
+
+  text-transform:uppercase;
+}
+
+.hero-content h1{
+  color:#fff;
+
+  font-size:5rem;
+  line-height:1.1;
+
+  margin:20px 0;
+}
+
+.hero-content h1 strong{
+  color:#f4b400;
+}
+
+.hero-content p{
+  color:#fff;
+
+  font-size:1.7rem;
+  font-weight:500;
+
+  letter-spacing:2px;
+}
+
+/* GOLD DOTS */
+
+.hero-overlay::after{
+  content:"";
+
+  position:absolute;
+
+  top:60px;
+  right:80px;
+
+  width:120px;
+  height:120px;
+
+  background-image:
+  radial-gradient(
+    #f4b400 2px,
+    transparent 2px
+  );
+
+  background-size:20px 20px;
+
+  opacity:.9;
+}
+
+/* CURVE */
+
+.hero-wave{
+  position:absolute;
+
+  left:0;
+  bottom:-1px;
+
+  width:100%;
+  height:170px;
+
+  background:#fff;
+
+  border-top:4px solid #f4b400;
+
+  border-radius:
+  0 0 50% 50% /
+  0 0 100% 100%;
+}/* ===================================
+   INTRO
+=================================== */
+
+.about-intro{
+  max-width:1400px;
+
+  margin:80px auto;
+
+  padding:0 6%;
+
+  display:grid;
+  grid-template-columns:
+  1fr
+  1fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.intro-image{
   position:relative;
 }
 
-.about-overlay{
+.intro-image img{
+  width:100%;
+
+  border-radius:30px;
+
+  border:6px solid #f4b400;
+
+  box-shadow:
+  0 20px 60px
+  rgba(0,0,0,.15);
+}
+
+.intro-image::before{
+  content:"";
+
+  position:absolute;
+
+  left:-25px;
+  top:60px;
+
+  width:60px;
+  height:180px;
+
+  background:#8B1E3F;
+
+  border-radius:20px;
+}
+
+.intro-content span{
+  color:#8B1E3F;
+
+  font-size:1.2rem;
+  font-weight:700;
+
+  letter-spacing:2px;
+}
+
+.intro-content h2{
+  color:#082567;
+
+  font-size:3.8rem;
+
+  line-height:1.1;
+
+  margin:15px 0 25px;
+}
+
+.intro-content p{
+  color:#555;
+
+  line-height:2;
+
+  font-size:1.05rem;
+
+  margin-bottom:15px;
+}
+
+.intro-features{
+  margin-top:40px;
+
+  display:grid;
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:20px;
+}
+
+.feature-box{
+  display:flex;
+  gap:15px;
+}
+
+.feature-box svg{
+  font-size:2rem;
+
+  color:#f4b400;
+}
+
+.feature-box h4{
+  color:#082567;
+
+  margin-bottom:6px;
+}
+
+.feature-box p{
+  font-size:.9rem;
+  line-height:1.5;
+}/* ===================================
+   VISION MISSION
+=================================== */
+
+.vision-bar{
+  max-width:1400px;
+
+  margin:80px auto;
+
+  padding:40px 60px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #02154a,
+    #082567
+  );
+
+  border-radius:25px;
+
+  display:grid;
+  grid-template-columns:
+  1fr
+  1px
+  1fr;
+
+  align-items:center;
+
+  gap:40px;
+}
+
+.divider{
+  width:1px;
+  height:120px;
+
+  background:
+  rgba(255,255,255,.2);
+}
+
+.vision-card{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.vision-card svg{
+  width:110px;
+  height:110px;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #8B1E3F,
+    #c32555
+  );
+
+  color:#fff;
+
+  font-size:2rem;
+}
+
+.vision-card:last-child svg{
+  background:
+  linear-gradient(
+    135deg,
+    #f4b400,
+    #ffcb42
+  );
+}
+
+.vision-card h3{
+  color:#f4b400;
+
+  margin-bottom:10px;
+}
+
+.vision-card p{
+  color:#fff;
+
+  line-height:1.8;
+}/* ===================================
+   HEAD TEACHER
+=================================== */
+
+.headteacher-section{
+  max-width:1400px;
+
+  margin:120px auto;
+
+  padding:0 6%;
+
+  display:grid;
+  grid-template-columns:
+  1fr
+  500px;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.message-card{
+  background:#fff;
+
+  padding:60px;
+
+  border-radius:35px;
+
+  position:relative;
+
+  box-shadow:
+  0 20px 60px
+  rgba(0,0,0,.08);
+}
+
+.message-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:-20px;
+  left:50px;
+
+  width:120px;
+  height:6px;
+
+  background:#f4b400;
+
+  border-radius:50px;
+}
+
+.message-card span{
+  color:#8B1E3F;
+
+  font-weight:700;
+
+  letter-spacing:3px;
+}
+
+.message-card h2{
+  color:#082567;
+
+  font-size:3rem;
+
+  margin:20px 0 30px;
+}
+
+.message-card blockquote{
+  color:#555;
+
+  font-size:1.15rem;
+
+  line-height:2;
+
+  font-style:italic;
+
+  border-left:5px solid #f4b400;
+
+  padding-left:25px;
+}
+
+.message-card h4{
+  color:#082567;
+
+  margin-top:35px;
+
+  font-size:1.4rem;
+}
+
+.message-card p{
+  color:#8B1E3F;
+}
+
+.headteacher-image{
+  position:relative;
+}
+
+.headteacher-image img{
+  width:100%;
+
+  border-radius:35px;
+
+  display:block;
+
+  box-shadow:
+  0 25px 70px
+  rgba(0,0,0,.15);
+}
+
+.teacher-badge{
+  position:absolute;
+
+  right:-30px;
+  bottom:40px;
+
+  background:#082567;
+
+  padding:25px;
+
+  border-radius:25px;
+
+  width:240px;
+
+  border:4px solid #f4b400;
+}
+
+.teacher-badge h4{
+  color:#fff;
+
+  line-height:1.8;
+}/* ===================================
+   VALUES
+=================================== */
+
+.values-section{
+  padding:120px 6%;
+
+  background:#fff;
+
+  text-align:center;
+}
+
+.values-section h2{
+  color:#082567;
+
+  font-size:3.5rem;
+
+  margin-bottom:80px;
+}
+
+.values-line{
+  position:relative;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.values-line::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  top:50%;
+
+  height:4px;
+
+  background:#f4b400;
+
+  transform:translateY(-50%);
+}
+
+.value-item{
+  position:relative;
+  z-index:2;
+}
+
+.value-item svg{
+  width:110px;
+  height:110px;
+
+  padding:30px;
+
+  border-radius:50%;
+
+  background:#082567;
+
+  color:#fff;
+
+  margin-bottom:20px;
+
+  border:5px solid #f4b400;
+}
+
+.value-item h4{
+  color:#082567;
+
+  font-size:1.2rem;
+}/* ===================================
+   TEACHERS
+=================================== */
+
+.teachers-banner{
+  position:relative;
+
+  min-height:650px;
+
+  overflow:hidden;
+}
+
+.teachers-banner img{
+  width:100%;
+  height:650px;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.teachers-content{
+  position:absolute;
+
+  top:0;
+  left:0;
+
   width:100%;
   height:100%;
 
   background:
   linear-gradient(
-    rgba(2,20,70,.75),
-    rgba(2,20,70,.75)
+    rgba(2,20,70,.82),
+    rgba(2,20,70,.82)
   );
 
   display:flex;
@@ -43,427 +577,385 @@
   padding:20px;
 }
 
-.hero-tag{
+.teachers-content span{
   color:#f4b400;
+
   font-weight:700;
+
   letter-spacing:4px;
-  margin-bottom:20px;
 }
 
-.about-overlay h1{
+.teachers-content h2{
   color:#fff;
-  font-size:5rem;
-  max-width:1000px;
-  line-height:1.1;
-  margin-bottom:25px;
+
+  font-size:4.5rem;
+
+  max-width:900px;
+
+  line-height:1.2;
+
+  margin:25px 0;
 }
 
-.about-overlay p{
+.teachers-content p{
   color:#fff;
-  font-size:1.2rem;
+
   max-width:700px;
-  line-height:1.8;
+
+  line-height:2;
+
+  margin-bottom:40px;
 }
 
-.hero-buttons{
-  margin-top:40px;
-  display:flex;
-  gap:20px;
-}
-
-.primary-btn,
-.secondary-btn{
-  text-decoration:none;
-  padding:16px 35px;
-  border-radius:50px;
-  font-weight:600;
-  transition:.3s;
-}
-
-.primary-btn{
-  background:#f4b400;
-  color:#082567;
-}
-
-.primary-btn:hover{
-  transform:translateY(-4px);
-}
-
-.secondary-btn{
-  border:2px solid #fff;
-  color:#fff;
-}
-
-.secondary-btn:hover{
-  background:#fff;
-  color:#082567;
-}
-
-/* ===================================
-   STORY
-=================================== */
-
-.school-story{
-  max-width:1400px;
-  margin:100px auto;
-  padding:0 6%;
-
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.story-image img{
-  width:100%;
-  border-radius:30px;
-  display:block;
-  box-shadow:
-  0 20px 50px rgba(0,0,0,.15);
-}
-
-.story-content span{
-  color:#8B1E3F;
-  font-weight:700;
-  letter-spacing:3px;
-}
-
-.story-content h2{
-  color:#082567;
-  font-size:3.2rem;
-  margin:15px 0 25px;
-}
-
-.story-content p{
-  color:#555;
-  line-height:1.9;
-  margin-bottom:20px;
-}
-
-.story-stats{
-  display:flex;
-  gap:40px;
-  margin-top:30px;
-}
-
-.story-stats h3{
-  color:#082567;
-  font-size:2.5rem;
-}
-
-.story-stats span{
-  color:#666;
-  letter-spacing:0;
-}
-
-/* ===================================
-   VISION MISSION
-=================================== */
-
-.vision-mission{
-  max-width:1300px;
-  margin:auto;
-  padding:0 6%;
-
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:30px;
-}
-
-.vm-card{
-  background:#fff;
-  padding:50px;
-  border-radius:25px;
-  text-align:center;
-
-  box-shadow:
-  0 15px 40px rgba(0,0,0,.08);
-
-  transition:.3s;
-}
-
-.vm-card:hover{
-  transform:translateY(-8px);
-}
-
-.vm-icon{
-  width:90px;
-  height:90px;
-
-  margin:auto;
-
-  background:#082567;
-  color:#fff;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:2rem;
-
-  margin-bottom:25px;
-}
-
-.vm-card h3{
-  color:#082567;
-  margin-bottom:15px;
-  font-size:2rem;
-}
-
-.vm-card p{
-  color:#555;
-  line-height:1.8;
-}
-
-/* ===================================
-   HEADTEACHER
-=================================== */
-
-.headteacher-section{
-  max-width:1400px;
-  margin:120px auto;
-  padding:0 6%;
-
-  display:grid;
-  grid-template-columns:450px 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.headteacher-image img{
-  width:100%;
-  border-radius:30px;
-}
-
-.headteacher-content span{
-  color:#8B1E3F;
-  font-weight:700;
-  letter-spacing:3px;
-}
-
-.headteacher-content h2{
-  color:#082567;
-  font-size:3rem;
-  margin:15px 0 25px;
-}
-
-.headteacher-content p{
-  color:#555;
-  line-height:1.9;
-  margin-bottom:20px;
-}
-
-.message-btn{
+.team-btn{
   display:inline-flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
 
   text-decoration:none;
 
-  background:#082567;
-  color:#fff;
+  background:#f4b400;
+  color:#082567;
 
-  padding:16px 30px;
+  padding:18px 40px;
+
   border-radius:50px;
 
-  margin-top:20px;
+  font-weight:700;
+
+  transition:.3s;
 }
 
-/* ===================================
-   VALUES
+.team-btn:hover{
+  transform:translateY(-5px);
+}/* ===================================
+   STATS
 =================================== */
 
-.core-values{
-  padding:100px 6%;
+.about-stats{
+  max-width:1400px;
+
+  margin:-80px auto 120px;
+
+  position:relative;
+  z-index:10;
+
   background:#fff;
-}
 
-.section-title{
-  text-align:center;
-  margin-bottom:60px;
-}
+  border-radius:35px;
 
-.section-title span{
-  color:#8B1E3F;
-  font-weight:700;
-  letter-spacing:3px;
-}
-
-.section-title h2{
-  color:#082567;
-  font-size:3rem;
-  margin-top:15px;
-}
-
-.values-grid{
-  max-width:1200px;
-  margin:auto;
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.12);
 
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:25px;
+
+  overflow:hidden;
 }
 
-.value-card{
-  background:#f7f9fc;
-  border-radius:20px;
-  padding:40px;
+.about-stats div{
+  padding:50px 30px;
+
   text-align:center;
+
+  border-right:1px solid #eee;
 }
 
-.value-card svg{
+.about-stats div:last-child{
+  border-right:none;
+}
+
+.about-stats svg{
+  font-size:3rem;
+
   color:#f4b400;
-  font-size:2.8rem;
+
   margin-bottom:20px;
 }
 
-.value-card h3{
+.about-stats h3{
   color:#082567;
+
+  font-size:3rem;
+  font-weight:800;
+
+  margin-bottom:10px;
 }
 
-/* ===================================
-   TEACHERS
-=================================== */
+.about-stats p{
+  color:#666;
 
-.teachers-section{
-  position:relative;
-  height:550px;
-}
-
-.teachers-section img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.teachers-overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    rgba(2,20,70,.7),
-    rgba(2,20,70,.7)
-  );
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-}
-
-.teachers-overlay span{
-  color:#f4b400;
-  font-weight:700;
-  letter-spacing:4px;
-}
-
-.teachers-overlay h2{
-  color:#fff;
-  font-size:4rem;
-  max-width:900px;
-  margin:20px 0;
-}
-
-.teachers-overlay p{
-  color:#fff;
-  max-width:650px;
-  line-height:1.8;
-}
-
-/* ===================================
+  font-size:1rem;
+  font-weight:500;
+}/* ===================================
    CTA
 =================================== */
 
 .about-cta{
-  background:#082567;
-  padding:100px 20px;
-  text-align:center;
+  max-width:1400px;
+
+  margin:0 auto 120px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #02154a,
+    #082567
+  );
+
+  border-radius:40px;
+
+  padding:70px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:40px;
+
+  position:relative;
+
+  overflow:hidden;
 }
 
-.about-cta h2{
+.about-cta::before{
+  content:"";
+
+  position:absolute;
+
+  right:-120px;
+  top:-120px;
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+
+  background:
+  rgba(244,180,0,.12);
+}
+
+.cta-left{
+  max-width:700px;
+}
+
+.cta-left h2{
   color:#fff;
-  font-size:3rem;
+
+  font-size:3.5rem;
+
+  line-height:1.2;
+
   margin-bottom:20px;
 }
 
-.about-cta p{
-  color:#ddd;
-  max-width:700px;
-  margin:auto;
-  line-height:1.8;
+.cta-left p{
+  color:#d7d7d7;
+
+  line-height:2;
+
+  font-size:1.05rem;
 }
 
 .cta-buttons{
-  margin-top:40px;
   display:flex;
-  justify-content:center;
   gap:20px;
 }
 
-/* ===================================
-   RESPONSIVE
+.apply-btn,
+.contact-btn{
+  text-decoration:none;
+
+  padding:18px 38px;
+
+  border-radius:50px;
+
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.apply-btn{
+  background:#f4b400;
+  color:#082567;
+}
+
+.contact-btn{
+  border:2px solid #fff;
+  color:#fff;
+}
+
+.apply-btn:hover,
+.contact-btn:hover{
+  transform:translateY(-5px);
+}/* ===================================
+   TABLET
 =================================== */
 
-@media(max-width:1100px){
+@media(max-width:1200px){
 
-  .school-story,
+  .hero-content h1{
+    font-size:4rem;
+  }
+
+  .about-intro{
+    grid-template-columns:1fr;
+  }
+
   .headteacher-section{
     grid-template-columns:1fr;
   }
 
-  .values-grid{
+  .vision-bar{
+    grid-template-columns:1fr;
+  }
+
+  .divider{
+    display:none;
+  }
+
+  .values-line{
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+  }
+
+  .values-line::before{
+    display:none;
+  }
+
+  .about-stats{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .about-overlay h1{
-    font-size:3.8rem;
+  .about-cta{
+    flex-direction:column;
+    text-align:center;
   }
 }
 
+/* ===================================
+   MOBILE
+=================================== */
+
 @media(max-width:768px){
 
-  .about-hero{
-    height:70vh;
+  .hero-overlay{
+    text-align:center;
+    justify-content:center;
   }
 
-  .about-overlay h1{
-    font-size:2.5rem;
+  .hero-logo{
+    width:80px;
+    top:25px;
   }
 
-  .hero-buttons{
-    flex-direction:column;
+  .hero-content h1{
+    font-size:2.7rem;
   }
 
-  .story-content h2,
-  .headteacher-content h2,
-  .section-title h2,
-  .about-cta h2{
+  .hero-content p{
+    font-size:1.1rem;
+  }
+
+  .intro-content h2,
+  .message-card h2,
+  .values-section h2,
+  .cta-left h2{
     font-size:2.2rem;
   }
 
-  .teachers-overlay h2{
-    font-size:2.4rem;
-  }
-
-  .values-grid{
+  .intro-features{
     grid-template-columns:1fr;
   }
 
-  .vision-mission{
-    grid-template-columns:1fr;
-  }
-
-  .story-stats{
+  .vision-card{
     flex-direction:column;
-    gap:20px;
+    text-align:center;
+  }
+
+  .vision-card svg{
+    width:90px;
+    height:90px;
+    padding:25px;
+  }
+
+  .message-card{
+    padding:35px 25px;
+  }
+
+  .teacher-badge{
+    position:relative;
+
+    right:auto;
+    bottom:auto;
+
+    width:100%;
+
+    margin-top:20px;
+  }
+
+  .teachers-content h2{
+    font-size:2.5rem;
+  }
+
+  .about-stats{
+    grid-template-columns:1fr;
+  }
+
+  .about-stats div{
+    border-right:none;
+    border-bottom:1px solid #eee;
+  }
+
+  .about-stats div:last-child{
+    border-bottom:none;
+  }
+
+  .about-cta{
+    padding:50px 25px;
   }
 
   .cta-buttons{
     flex-direction:column;
+    width:100%;
+  }
+
+  .apply-btn,
+  .contact-btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
+/* ===================================
+   SMALL PHONES
+=================================== */
+
+@media(max-width:480px){
+
+  .hero-content h1{
+    font-size:2.2rem;
+  }
+
+  .intro-content h2,
+  .message-card h2,
+  .values-section h2,
+  .cta-left h2{
+    font-size:1.9rem;
+  }
+
+  .teachers-content h2{
+    font-size:2rem;
+  }
+
+  .value-item svg{
+    width:90px;
+    height:90px;
+    padding:25px;
+  }
+
+  .about-stats h3{
+    font-size:2.2rem;
   }
 }
