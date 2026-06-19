@@ -69,23 +69,21 @@
 .hero-content h1 span{
   color:#f4b400;
 }
-
 .yellow-line{
   width:70px;
   height:4px;
-
   background:#f4b400;
 
-  margin:35px 0;
+  margin:20px 0; /* was 35px */
 }
 
 .hero-content p{
   color:#fff;
-
-    font-size:20px;
+  font-size:20px;
   max-width:500px;
   line-height:1.5;
 
+  margin-top:0; /* add */
 }
 
 .hero-buttons{
@@ -93,7 +91,7 @@
   align-items:center;
   gap:20px;
 
-  margin-top:25px;
+  margin-top:15px; /* was 25px */
 }
 
 .apply-btn,
