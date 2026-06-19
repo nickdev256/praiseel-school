@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 import {
@@ -27,11 +26,6 @@ function AboutPage() {
   return (
     <main className="about-page">
 
-      {/* WATERMARK */}
-      <div className="page-watermark">
-        <FaSchool />
-      </div>
-
       {/* HERO */}
 
       <section
@@ -58,7 +52,9 @@ function AboutPage() {
               <strong>Through Excellence</strong>
             </h1>
 
-            <p>Learn • Lead • Grow</p>
+            <p>
+              Learn • Lead • Grow
+            </p>
 
           </div>
 
@@ -68,14 +64,17 @@ function AboutPage() {
 
       </section>
 
-      {/* INTRO */}
+      {/* ABOUT INTRO */}
 
       <section className="about-intro">
 
-        <div className="intro-decoration"></div>
-
         <div className="intro-image">
-          <img src={aboutImage} alt="Students" />
+
+          <img
+            src={aboutImage}
+            alt="Students"
+          />
+
         </div>
 
         <div className="intro-content">
@@ -89,14 +88,17 @@ function AboutPage() {
           </h2>
 
           <p>
-            Praise-El Junior School is a Christian based institution
-            committed to providing quality Nursery and Primary education
-            in a caring, safe and inspiring environment.
+            Praise-El Junior School is a Christian
+            based institution committed to providing
+            quality Nursery and Primary education
+            in a caring, safe and inspiring
+            environment.
           </p>
 
           <p>
-            We nurture learners academically, morally and socially
-            while preparing them for future success.
+            We nurture learners academically,
+            morally and socially while preparing
+            them for future success.
           </p>
 
           <div className="intro-features">
@@ -105,7 +107,9 @@ function AboutPage() {
               <FaSchool />
               <div>
                 <h4>Quality Education</h4>
-                <p>Strong academic foundation.</p>
+                <p>
+                  Strong academic foundation.
+                </p>
               </div>
             </div>
 
@@ -113,7 +117,9 @@ function AboutPage() {
               <FaShieldAlt />
               <div>
                 <h4>Safe Environment</h4>
-                <p>Secure and supportive learning.</p>
+                <p>
+                  Caring and secure learning.
+                </p>
               </div>
             </div>
 
@@ -121,7 +127,9 @@ function AboutPage() {
               <FaUsers />
               <div>
                 <h4>Holistic Growth</h4>
-                <p>Character and leadership.</p>
+                <p>
+                  Character and leadership.
+                </p>
               </div>
             </div>
 
@@ -131,7 +139,7 @@ function AboutPage() {
 
       </section>
 
-      {/* VISION + MISSION */}
+      {/* VISION MISSION BAR */}
 
       <section className="vision-bar">
 
@@ -140,12 +148,15 @@ function AboutPage() {
           <FaEye />
 
           <div>
+
             <h3>OUR VISION</h3>
 
             <p>
-              To be a centre of excellence nurturing
-              responsible, confident and innovative learners.
+              To be a centre of excellence
+              nurturing responsible, confident
+              and innovative learners.
             </p>
+
           </div>
 
         </div>
@@ -157,12 +168,16 @@ function AboutPage() {
           <FaBullseye />
 
           <div>
+
             <h3>OUR MISSION</h3>
 
             <p>
-              To provide holistic education through quality
-              teaching, discipline and leadership development.
+              To provide holistic education
+              through quality teaching,
+              discipline and leadership
+              development.
             </p>
+
           </div>
 
         </div>
@@ -179,26 +194,29 @@ function AboutPage() {
 
           <h2>
             Message From The
-            <br />
             Head Teacher
           </h2>
 
           <blockquote>
-            At Praise-El Junior School, we believe every child
-            has unique potential. Through dedication, innovation
-            and teamwork, we continue to provide a strong
-            educational foundation that empowers our learners.
+            At Praise-El Junior School, we believe
+            every child has unique potential.
+            Through dedication, innovation and
+            teamwork, we continue to provide a
+            strong educational foundation that
+            empowers our learners to excel.
           </blockquote>
 
-          <h4>Joyce Namagembe</h4>
+          <h4>
+            Joyce Namagembe
+          </h4>
 
-          <p>Head Teacher</p>
+          <p>
+            Head Teacher
+          </p>
 
         </div>
 
         <div className="headteacher-image">
-
-          <div className="teacher-decoration"></div>
 
           <img
             src={headteacher}
@@ -206,6 +224,7 @@ function AboutPage() {
           />
 
           <div className="teacher-badge">
+
             <h4>
               Dedicated.
               <br />
@@ -213,13 +232,14 @@ function AboutPage() {
               <br />
               Passionate.
             </h4>
+
           </div>
 
         </div>
 
       </section>
 
-      {/* VALUES */}
+      {/* VALUES TIMELINE */}
 
       <section className="values-section">
 
@@ -256,51 +276,47 @@ function AboutPage() {
 
       </section>
 
-      {/* EDUCATORS SECTION */}
+      {/* TEACHERS BANNER */}
 
-      <section className="teachers-team-section">
+      <section className="teachers-banner">
 
-        <div className="teachers-card">
+        <div className="teachers-content">
 
-          <div className="teachers-text">
+          <span>OUR EDUCATORS</span>
 
-            <span>OUR EDUCATORS</span>
+          <h2>
+            Professional.
+            Passionate.
+            Dedicated To Excellence.
+          </h2>
 
-            <h2>
-              Professional.
-              Passionate.
-              Dedicated To Excellence.
-            </h2>
+          <p>
+            Our teachers are qualified,
+            experienced and committed
+            to bringing out the best
+            in every child.
+          </p>
 
-            <p>
-              Our teachers are qualified, experienced and
-              committed to bringing out the best in every child.
-            </p>
-
-            <Link
-              to="/contact"
-              className="team-btn"
-            >
-              Meet Our Team
-              <FaArrowRight />
-            </Link>
-
-          </div>
-
-          <div className="teachers-image">
-            <img
-              src={teachersImg}
-              alt="Teachers"
-            />
-          </div>
+          <Link
+            to="/contact"
+            className="team-btn"
+          >
+            Meet Our Team
+            <FaArrowRight />
+          </Link>
 
         </div>
+
+        <img
+          src={teachersImg}
+          alt="Teachers"
+        />
 
       </section>
 
       {/* STATS */}
 
-      <section className="stats-strip">
+      <section className="about-stats">
 
         <div>
           <FaGraduationCap />
@@ -330,9 +346,9 @@ function AboutPage() {
 
       {/* CTA */}
 
-      <section className="join-strip">
+      <section className="about-cta">
 
-        <div className="join-left">
+        <div className="cta-left">
 
           <h2>
             Ready To Join
@@ -340,13 +356,14 @@ function AboutPage() {
           </h2>
 
           <p>
-            Give your child the gift of quality education
-            and a bright future.
+            Give your child the gift of
+            quality education and a
+            bright future.
           </p>
 
         </div>
 
-        <div className="join-buttons">
+        <div className="cta-buttons">
 
           <Link
             to="/admissions"
@@ -371,4 +388,3 @@ function AboutPage() {
 }
 
 export default AboutPage;
-
