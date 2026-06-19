@@ -42,7 +42,6 @@ function Footer() {
 
           <div className="footer-brand">
 
-            <img src={logo} alt="Logo" />
 
             <h2>
               Praise-El
