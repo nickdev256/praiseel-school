@@ -1,30 +1,18 @@
 import { useState } from "react";
-import {
-  Link,
-  NavLink,
-  useLocation
-} from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
 import {
   FaBars,
   FaTimes,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaArrowRight
 } from "react-icons/fa";
 
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 function Navbar() {
-
-  const location = useLocation();
-
-  // SHOW NAVBAR ONLY ON HOME PAGE
-  if (location.pathname !== "/") {
-    return null;
-  }
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
@@ -32,11 +20,9 @@ function Navbar() {
   return (
     <>
       {/* TOP BAR */}
-
       <div className="topbar">
 
         <div className="topbar-left">
-
           <span>
             <FaPhoneAlt />
             0744523317
@@ -46,47 +32,33 @@ function Navbar() {
             <FaEnvelope />
             info@praiseel.ac.ug
           </span>
-
         </div>
 
         <div className="topbar-right">
-
           <span>
             <FaMapMarkerAlt />
             Kokoola-Kalagi, Mukono
           </span>
-
         </div>
 
       </div>
 
       {/* NAVBAR */}
-
       <header className="navbar">
 
         <Link
           to="/"
           className="logo-section"
-          onClick={closeMenu}
         >
-
           <img
             src={logo}
             alt="Praise-El Junior School"
           />
 
           <div className="school-info">
-
-            <h2>
-              Praise-El Junior School
-            </h2>
-
-            <span>
-              Aspiring For Excellence
-            </span>
-
+            <h2>Praise-El Junior School</h2>
+            <span>Aspiring For Excellence</span>
           </div>
-
         </Link>
 
         <nav
@@ -96,7 +68,6 @@ function Navbar() {
               : "nav-menu"
           }
         >
-
           <NavLink
             to="/"
             onClick={closeMenu}
@@ -129,7 +100,7 @@ function Navbar() {
             to="/contact"
             onClick={closeMenu}
           >
-            Contact Us
+            Contact
           </NavLink>
 
           <NavLink
@@ -146,7 +117,6 @@ function Navbar() {
           >
             Enroll Now
           </Link>
-
         </nav>
 
         <Link
@@ -154,6 +124,7 @@ function Navbar() {
           className="enroll-btn"
         >
           Enroll Now
+          <FaArrowRight />
         </Link>
 
         <div

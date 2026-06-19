@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaArrowRight,
+  FaGraduationCap,
+  FaShieldAlt,
+  FaUsers,
+  FaTrophy
+} from "react-icons/fa";
+
 import "./Hero.css";
 
 import hero1 from "../assets/hero1.jpg";
@@ -12,28 +20,38 @@ function Hero() {
   const slides = [
     {
       image: hero1,
-      title: "Aspiring For Excellence",
-      subtitle: "Nurturing Future Leaders Through Quality Education",
+      title: "Aspiring For",
+      highlight: "Excellence",
+      subtitle:
+        "Nurturing Future Leaders Through Quality Education",
     },
     {
       image: hero2,
-      title: "Learning Beyond",
-      subtitle: "Building Creativity, Confidence & Character",
+      title: "Learning",
+      highlight: "Beyond",
+      subtitle:
+        "Building Creativity, Confidence & Character",
     },
     {
       image: hero3,
-      title: "Safe & Caring Environment",
-      subtitle: "Every Child Matters At Praise-El Junior School",
+      title: "Safe & Caring",
+      highlight: "Environment",
+      subtitle:
+        "Every Child Matters At Praise-El Junior School",
     },
     {
       image: hero4,
-      title: "Academic Excellence",
-      subtitle: "Strong Foundations For Lifelong Success",
+      title: "Academic",
+      highlight: "Excellence",
+      subtitle:
+        "Strong Foundations For Lifelong Success",
     },
     {
       image: hero5,
-      title: "Growing Together",
-      subtitle: "Developing Responsible Citizens Of Tomorrow",
+      title: "Growing",
+      highlight: "Together",
+      subtitle:
+        "Developing Responsible Citizens Of Tomorrow",
     },
   ];
 
@@ -63,6 +81,7 @@ function Hero() {
 
   return (
     <section className="hero">
+
       {slides.map((slide, index) => (
         <img
           key={index}
@@ -79,7 +98,6 @@ function Hero() {
       <button
         className="slider-arrow left"
         onClick={prevSlide}
-        aria-label="Previous Slide"
       >
         ❮
       </button>
@@ -87,27 +105,43 @@ function Hero() {
       <button
         className="slider-arrow right"
         onClick={nextSlide}
-        aria-label="Next Slide"
       >
         ❯
       </button>
 
       <div className="hero-content">
-        <span className="hero-badge">
-          Admissions Open For 2026
-        </span>
 
-        <div key={currentSlide} className="hero-text">
-          <h1>{slides[currentSlide].title}</h1>
-          <p>{slides[currentSlide].subtitle}</p>
+        <div className="hero-badge">
+          <FaGraduationCap />
+          Admissions Open For 2026
+        </div>
+
+        <div
+          key={currentSlide}
+          className="hero-text"
+        >
+          <h1>
+            {slides[currentSlide].title}
+            <span>
+              {slides[currentSlide].highlight}
+            </span>
+          </h1>
+
+          <div className="hero-line"></div>
+
+          <p>
+            {slides[currentSlide].subtitle}
+          </p>
         </div>
 
         <div className="hero-buttons">
+
           <Link
             to="/admissions"
             className="btn-primary"
           >
             Apply Now
+            <FaArrowRight />
           </Link>
 
           <Link
@@ -115,15 +149,76 @@ function Hero() {
             className="btn-secondary"
           >
             Discover More
+            <FaArrowRight />
           </Link>
+
         </div>
+
+      </div>
+
+      <div className="hero-features">
+
+        <div className="feature-card">
+          <div className="feature-icon">
+            <FaGraduationCap />
+          </div>
+
+          <div>
+            <h4>Quality Education</h4>
+            <p>
+              Strong academic foundation
+            </p>
+          </div>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">
+            <FaShieldAlt />
+          </div>
+
+          <div>
+            <h4>Safe Environment</h4>
+            <p>
+              Secure and caring learning space
+            </p>
+          </div>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">
+            <FaUsers />
+          </div>
+
+          <div>
+            <h4>Holistic Growth</h4>
+            <p>
+              Character, confidence & creativity
+            </p>
+          </div>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">
+            <FaTrophy />
+          </div>
+
+          <div>
+            <h4>Excellence Always</h4>
+            <p>
+              Preparing leaders of tomorrow
+            </p>
+          </div>
+        </div>
+
       </div>
 
       <div className="slider-dots">
         {slides.map((_, index) => (
           <span
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() =>
+              setCurrentSlide(index)
+            }
             className={`dot ${
               index === currentSlide
                 ? "active-dot"
@@ -132,6 +227,7 @@ function Hero() {
           />
         ))}
       </div>
+
     </section>
   );
 }

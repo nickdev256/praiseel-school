@@ -1,11 +1,12 @@
-/* ======================
+/* ==========================
    TOP BAR
-====================== */
+========================== */
 
 .topbar{
     position:absolute;
     top:0;
     left:0;
+
     width:100%;
 
     z-index:1001;
@@ -14,39 +15,43 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:10px 6%;
-
-    background:rgba(0,0,0,.25);
+    padding:14px 5%;
 
     color:#fff;
 
-    font-size:clamp(.75rem,1vw,.9rem);
-    font-weight:500;
+    background:transparent;
 }
 
 .topbar-left,
 .topbar-right{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:30px;
 }
 
 .topbar span{
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:10px;
+
+    font-size:.95rem;
+    font-weight:500;
 }
 
-/* ======================
+/* ==========================
    NAVBAR
-====================== */
+========================== */
 
 .navbar{
     position:absolute;
-    top:40px;
-    left:0;
 
-    width:100%;
+    top:65px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:95%;
+    max-width:1500px;
 
     z-index:1000;
 
@@ -55,196 +60,192 @@
 
     align-items:center;
 
-    padding:15px 6%;
+    padding:18px 28px;
 
-    background:transparent;
+    background:rgba(255,255,255,.95);
+
+    border-radius:24px;
+
+    box-shadow:
+      0 20px 60px rgba(0,0,0,.15);
 }
 
-/* ======================
-   LOGO SECTION
-====================== */
+/* ==========================
+   LOGO
+========================== */
 
 .logo-section{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:18px;
 
     text-decoration:none;
 }
 
 .logo-section img{
-    width:clamp(70px,8vw,120px);
-    height:clamp(70px,8vw,120px);
+    width:95px;
+    height:95px;
 
     object-fit:contain;
-
-    filter:
-      drop-shadow(
-        0 6px 15px rgba(0,0,0,.25)
-      );
-
-    transition:.3s ease;
-}
-
-.logo-section:hover img{
-    transform:scale(1.05);
-}
-
-.school-info{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
 }
 
 .school-info h2{
-    color:#fff;
+    color:#082567;
 
-    font-size:clamp(1rem,2vw,2rem);
-
+    font-size:2rem;
     font-weight:800;
 
-    line-height:1.1;
-
     margin-bottom:6px;
-
-    text-shadow:
-      0 2px 8px rgba(0,0,0,.4);
 }
 
 .school-info span{
-    color:#F4B400;
+    color:#f4b400;
 
-    font-size:clamp(.7rem,1vw,1rem);
-
+    font-size:1rem;
     font-weight:700;
-
-    letter-spacing:.5px;
-
-    text-shadow:
-      0 2px 8px rgba(0,0,0,.4);
 }
 
-/* ======================
+/* ==========================
    MENU
-====================== */
+========================== */
 
 .nav-menu{
     display:flex;
-
     justify-self:center;
     align-items:center;
 
-    gap:clamp(15px,2vw,35px);
+    gap:40px;
 }
 
 .nav-menu a{
-    color:#fff;
+    position:relative;
 
     text-decoration:none;
 
-    font-size:clamp(.9rem,1vw,1rem);
+    color:#082567;
 
-    font-weight:600;
+    font-size:1rem;
+    font-weight:700;
 
-    position:relative;
-
-    transition:.3s ease;
+    transition:.3s;
 }
 
-.nav-menu a:hover{
-    color:#F4B400;
-}
-
+.nav-menu a:hover,
 .nav-menu a.active{
-    color:#F4B400;
+    color:#f4b400;
 }
 
-.nav-menu a.active::after{
+.nav-menu a::after{
     content:"";
 
     position:absolute;
 
-    bottom:-8px;
+    bottom:-12px;
     left:0;
 
-    width:100%;
+    width:0;
     height:3px;
 
-    background:#F4B400;
+    background:#f4b400;
 
-    border-radius:50px;
+    border-radius:20px;
+
+    transition:.3s;
 }
 
-/* ======================
-   ENROLL BUTTON
-====================== */
+.nav-menu a:hover::after,
+.nav-menu a.active::after{
+    width:100%;
+}
+
+/* ==========================
+   BUTTON
+========================== */
 
 .enroll-btn{
-    justify-self:end;
-
-    background:#F4B400;
-    color:#0A2E73;
+    display:flex;
+    align-items:center;
+    gap:12px;
 
     text-decoration:none;
 
-    padding:
-      clamp(12px,2vw,16px)
-      clamp(24px,4vw,38px);
+    background:#f4b400;
+    color:#082567;
+
+    padding:18px 30px;
 
     border-radius:50px;
 
-    font-size:
-      clamp(.9rem,1vw,1rem);
+    font-weight:800;
 
-    font-weight:700;
-
-    transition:.3s ease;
+    transition:.3s;
 }
 
 .enroll-btn:hover{
     transform:translateY(-3px);
-    background:#ffd04a;
 }
 
-/* ======================
-   MOBILE BUTTON
-====================== */
+.enroll-btn svg{
+    width:34px;
+    height:34px;
+
+    padding:8px;
+
+    border-radius:50%;
+
+    background:#082567;
+    color:#fff;
+}
+
+/* ==========================
+   MOBILE
+========================== */
 
 .mobile-btn{
     display:none;
 }
 
-/* ======================
-   MENU ICON
-====================== */
-
 .menu-icon{
     display:none;
-
-    color:#fff;
-
-    font-size:2rem;
-
-    cursor:pointer;
 }
 
-/* ======================
-   MOBILE & TABLET
-====================== */
+/* ==========================
+   TABLET
+========================== */
 
-@media (max-width:992px){
+@media(max-width:1100px){
+
+    .school-info{
+        display:none;
+    }
+
+    .nav-menu{
+        gap:25px;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:992px){
 
     .topbar{
         display:none;
     }
 
     .navbar{
-        top:0;
-        padding:15px 5%;
+        top:20px;
     }
 
     .menu-icon{
         display:block;
+
+        font-size:2rem;
+
+        color:#082567;
+
+        cursor:pointer;
     }
 
     .enroll-btn{
@@ -257,25 +258,22 @@
         top:0;
         right:-100%;
 
-        width:min(85vw,320px);
-
+        width:320px;
         height:100vh;
 
-        background:#0A2E73;
+        background:#082567;
 
         display:flex;
         flex-direction:column;
 
-        justify-content:flex-start;
         align-items:flex-start;
+        justify-content:flex-start;
 
-        gap:25px;
+        padding:120px 40px;
 
-        padding:120px 35px;
+        gap:30px;
 
         transition:.4s ease;
-
-        z-index:999;
     }
 
     .nav-menu.active{
@@ -283,42 +281,34 @@
     }
 
     .nav-menu a{
-        font-size:1rem;
+        color:#fff;
+        font-size:1.1rem;
     }
 
     .mobile-btn{
         display:block;
 
-        background:#F4B400;
-
-        color:#0A2E73 !important;
+        background:#f4b400;
+        color:#082567 !important;
 
         padding:14px 28px;
 
         border-radius:50px;
 
         font-weight:700;
-
-        margin-top:10px;
-    }
-
-    .logo-section{
-        gap:10px;
     }
 }
 
-/* ======================
-   SMALL PHONES
-====================== */
+@media(max-width:768px){
 
-@media (max-width:480px){
-
-    .school-info h2{
-        font-size:.95rem;
+    .navbar{
+        width:92%;
+        padding:15px 20px;
     }
 
-    .school-info span{
-        font-size:.7rem;
+    .logo-section img{
+        width:75px;
+        height:75px;
     }
 
     .nav-menu{
