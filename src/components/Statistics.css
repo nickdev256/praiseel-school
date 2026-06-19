@@ -1,121 +1,248 @@
-/* =========================
-   STATISTICS SECTION
-========================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 .stats-section{
-    background:#082567;
+  font-family:"Poppins",sans-serif;
+  background:#f7f8fb;
+  overflow:hidden;
+}
 
-    padding:120px 6%;
+/* ========================= */
+/* TOP */
+/* ========================= */
+
+.stats-top{
+  position:relative;
+  min-height:520px;
+  padding:100px 6%;
+
+  display:grid;
+  grid-template-columns:1fr 500px;
+  align-items:center;
+}
+
+.stats-watermark{
+  position:absolute;
+  left:40px;
+  top:60px;
+
+  font-size:220px;
+  color:rgba(8,37,103,.05);
 }
 
 .stats-header{
-    text-align:center;
-
-    max-width:800px;
-
-    margin:0 auto 70px;
+  text-align:center;
+  max-width:850px;
+  margin:auto;
 }
 
-.stats-header span{
-    color:#F4B400;
+.stats-tag{
+  display:block;
 
-    font-size:.9rem;
-    font-weight:700;
+  color:#d49a11;
 
-    letter-spacing:2px;
+  letter-spacing:6px;
+  font-weight:700;
+
+  margin-bottom:20px;
 }
 
 .stats-header h2{
-    color:white;
+  color:#082567;
 
-    font-size:3rem;
+  font-size:5rem;
+  font-weight:800;
 
-    margin:15px 0;
+  margin-bottom:15px;
+}
+
+.title-line{
+  width:80px;
+  height:4px;
+
+  background:#d49a11;
+
+  margin:20px auto 30px;
 }
 
 .stats-header p{
-    color:rgba(255,255,255,.8);
-
-    font-size:1.1rem;
-    line-height:1.8;
+  color:#444;
+  font-size:1.3rem;
+  line-height:1.8;
 }
 
-.stats-grid{
-    max-width:1300px;
+.stats-image{
+  position:absolute;
+  right:0;
+  top:0;
 
-    margin:auto;
+  width:450px;
+  height:100%;
+}
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
+.stats-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    gap:30px;
+/* ========================= */
+/* BOTTOM */
+/* ========================= */
+
+.stats-bottom{
+  background:#001f63;
+
+  padding:90px 6% 80px;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:35px;
 }
 
 .stat-card{
-    background:white;
+  position:relative;
 
-    padding:45px 25px;
+  background:rgba(255,255,255,.05);
 
-    border-radius:15px;
+  backdrop-filter:blur(15px);
 
-    text-align:center;
+  border:1px solid rgba(255,255,255,.15);
 
-    transition:.35s ease;
+  border-radius:25px;
+
+  padding:70px 25px 40px;
+
+  text-align:center;
 }
 
-.stat-card:hover{
-    transform:translateY(-10px);
+.stat-icon{
+  position:absolute;
+  top:-45px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+
+  background:#001f63;
+
+  border:2px solid #d49a11;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#d49a11;
+  font-size:2rem;
 }
 
 .stat-card h3{
-    color:#8B1E3F;
+  color:#fff;
 
-    font-size:3.5rem;
+  font-size:4rem;
+  font-weight:800;
+}
 
-    margin-bottom:10px;
+.stat-card span{
+  display:block;
+
+  width:60px;
+  height:3px;
+
+  background:#d49a11;
+
+  margin:18px auto;
 }
 
 .stat-card p{
-    color:#555;
-
-    font-size:1.05rem;
-    font-weight:600;
+  color:#fff;
+  font-size:1.3rem;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* ========================= */
+/* QUOTE */
+/* ========================= */
 
-@media(max-width:992px){
+.stats-quote{
+  background:#001f63;
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  color:#fff;
 
-    .stats-header h2{
-        font-size:2.5rem;
-    }
+  text-align:center;
+
+  font-size:2rem;
+  font-style:italic;
+
+  padding-bottom:60px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width:1200px){
+
+  .stats-bottom{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats-header h2{
+    font-size:4rem;
+  }
+
+  .stats-image{
+    display:none;
+  }
+
+  .stats-top{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
 
 @media(max-width:768px){
 
-    .stats-section{
-        padding:90px 5%;
-    }
+  .stats-top{
+    padding:80px 20px;
+  }
 
-    .stats-grid{
-        grid-template-columns:1fr;
-    }
+  .stats-header h2{
+    font-size:2.8rem;
+  }
 
-    .stats-header h2{
-        font-size:2rem;
-    }
+  .stats-header p{
+    font-size:1rem;
+  }
 
-    .stat-card h3{
-        font-size:3rem;
-    }
+  .stats-bottom{
+    grid-template-columns:1fr;
+    gap:70px;
+
+    padding:80px 20px;
+  }
+
+  .stat-card h3{
+    font-size:3rem;
+  }
+
+  .stat-card p{
+    font-size:1.1rem;
+  }
+
+  .stats-quote{
+    font-size:1.2rem;
+    padding:0 20px 50px;
+  }
 }

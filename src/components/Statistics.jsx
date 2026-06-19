@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
+import {
+  FaGraduationCap,
+  FaChalkboardTeacher,
+  FaTrophy,
+  FaCalendarAlt,
+} from "react-icons/fa";
+
 import "./Statistics.css";
+import schoolKids from "../assets/school-kids.jpg";
 
 function Counter({ end, suffix }) {
   const [count, setCount] = useState(0);
@@ -36,32 +44,58 @@ function Statistics() {
   return (
     <section className="stats-section">
 
-      <div className="stats-header">
+      {/* TOP AREA */}
 
-        <span>OUR ACHIEVEMENTS</span>
+      <div className="stats-top">
 
-        <h2>
-          Excellence In Numbers
-        </h2>
+        <div className="stats-watermark">
+          🎓
+        </div>
 
-        <p>
-          Our commitment to quality education is reflected
-          in the achievements of our learners, teachers
-          and school community.
-        </p>
+        <div className="stats-header">
+
+          <span className="stats-tag">
+            OUR ACHIEVEMENTS
+          </span>
+
+          <h2>
+            Excellence In Numbers
+          </h2>
+
+          <div className="title-line"></div>
+
+          <p>
+            Our commitment to quality education is reflected
+            in the achievements of our learners, teachers
+            and school community.
+          </p>
+
+        </div>
+
+        <div className="stats-image">
+          <img
+            src={schoolKids}
+            alt="Students"
+          />
+        </div>
 
       </div>
 
-      <div className="stats-grid">
+      {/* STATS AREA */}
+
+      <div className="stats-bottom">
 
         <div className="stat-card">
 
+          <div className="stat-icon">
+            <FaGraduationCap />
+          </div>
+
           <h3>
-            <Counter
-              end={500}
-              suffix="+"
-            />
+            <Counter end={500} suffix="+" />
           </h3>
+
+          <span></span>
 
           <p>Students</p>
 
@@ -69,12 +103,15 @@ function Statistics() {
 
         <div className="stat-card">
 
+          <div className="stat-icon">
+            <FaChalkboardTeacher />
+          </div>
+
           <h3>
-            <Counter
-              end={35}
-              suffix="+"
-            />
+            <Counter end={35} suffix="+" />
           </h3>
+
+          <span></span>
 
           <p>Qualified Teachers</p>
 
@@ -82,12 +119,15 @@ function Statistics() {
 
         <div className="stat-card">
 
+          <div className="stat-icon">
+            <FaTrophy />
+          </div>
+
           <h3>
-            <Counter
-              end={98}
-              suffix="%"
-            />
+            <Counter end={98} suffix="%" />
           </h3>
+
+          <span></span>
 
           <p>Success Rate</p>
 
@@ -95,17 +135,24 @@ function Statistics() {
 
         <div className="stat-card">
 
+          <div className="stat-icon">
+            <FaCalendarAlt />
+          </div>
+
           <h3>
-            <Counter
-              end={10}
-              suffix="+"
-            />
+            <Counter end={10} suffix="+" />
           </h3>
+
+          <span></span>
 
           <p>Years Experience</p>
 
         </div>
 
+      </div>
+
+      <div className="stats-quote">
+        Every Child Matters, Every Achievement Counts.
       </div>
 
     </section>
