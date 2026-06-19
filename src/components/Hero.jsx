@@ -11,7 +11,7 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-import heroBg from "../assets/hero-bg.jpg";
+import heroBg from "../assets/hero2.jpg";
 import logo from "../assets/logo.png";
 
 const Hero = () => {
