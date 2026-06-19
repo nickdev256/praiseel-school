@@ -1,32 +1,12 @@
-import { Link } from "react-router-dom";
-
-import {
-  FaEye,
-  FaBullseye,
-  FaChurch,
-  FaShieldAlt,
-  FaTrophy,
-  FaUserTie,
-  FaHandshake,
-  FaGraduationCap,
-  FaUsers,
-  FaSchool,
-  FaArrowRight,
-} from "react-icons/fa";
-
 import "./AboutPage.css";
 
-import hero from "../assets/about-school.jpg";
-import aboutImage from "../assets/gallery1.jpg";
-import headteacher from "../assets/headteacher.jpg";
-import teachersImg from "../assets/gallery2.jpg";
-import logo from "../assets/logo.png";
+import hero from "../assets/hero1.jpg";
+import chairman from "../assets/headteacher.jpg";
+import teacherImg from "../assets/gallery2.jpg";
 
 function AboutPage() {
   return (
     <main className="about-page">
-
-      {/* HERO */}
 
       <section
         className="about-hero"
@@ -34,352 +14,121 @@ function AboutPage() {
           backgroundImage: `url(${hero})`,
         }}
       >
-        <div className="hero-overlay">
+        <div className="about-overlay">
 
-          <img
-            src={logo}
-            alt="Praise-El"
-            className="hero-logo"
-          />
+          <span>ABOUT US</span>
 
-          <div className="hero-content">
+          <h1>
+            Praise-El Junior School
+          </h1>
 
-            <span>ABOUT PRAISE-EL</span>
-
-            <h1>
-              Building Future Leaders
-              <br />
-              <strong>Through Excellence</strong>
-            </h1>
-
-            <p>
-              Learn • Lead • Grow
-            </p>
-
-          </div>
+          <p>
+            Aspiring For Excellence
+          </p>
 
         </div>
-
-        <div className="hero-wave"></div>
-
       </section>
-
-      {/* ABOUT INTRO */}
 
       <section className="about-intro">
 
-        <div className="intro-image">
+        <div className="container">
+
+          <h2>
+            Welcome To Praise-El Junior School
+          </h2>
+
+          <p>
+            Praise-El Junior School is committed to
+            providing quality Nursery and Primary
+            education in a caring, safe and inspiring
+            environment. We nurture learners
+            academically, morally and socially while
+            preparing them for future success.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section className="vision-mission">
+
+        <div className="box">
+
+          <h3>Our Vision</h3>
+
+          <p>
+            To be a centre of excellence nurturing
+            responsible, confident and innovative
+            learners.
+          </p>
+
+        </div>
+
+        <div className="box">
+
+          <h3>Our Mission</h3>
+
+          <p>
+            To provide holistic education through
+            quality teaching, discipline and
+            leadership development.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section className="chairman-section">
+
+        <div className="chairman-image">
 
           <img
-            src={aboutImage}
-            alt="Students"
+            src={chairman}
+            alt="Head Teacher"
           />
 
         </div>
 
-        <div className="intro-content">
-
-          <span>WHO WE ARE</span>
-
-          <h2>
-            Welcome To
-            <br />
-            Praise-El Junior School
-          </h2>
-
-          <p>
-            Praise-El Junior School is a Christian
-            based institution committed to providing
-            quality Nursery and Primary education
-            in a caring, safe and inspiring
-            environment.
-          </p>
-
-          <p>
-            We nurture learners academically,
-            morally and socially while preparing
-            them for future success.
-          </p>
-
-          <div className="intro-features">
-
-            <div className="feature-box">
-              <FaSchool />
-              <div>
-                <h4>Quality Education</h4>
-                <p>
-                  Strong academic foundation.
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-box">
-              <FaShieldAlt />
-              <div>
-                <h4>Safe Environment</h4>
-                <p>
-                  Caring and secure learning.
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-box">
-              <FaUsers />
-              <div>
-                <h4>Holistic Growth</h4>
-                <p>
-                  Character and leadership.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* VISION MISSION BAR */}
-
-      <section className="vision-bar">
-
-        <div className="vision-card">
-
-          <FaEye />
-
-          <div>
-
-            <h3>OUR VISION</h3>
-
-            <p>
-              To be a centre of excellence
-              nurturing responsible, confident
-              and innovative learners.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="vision-card">
-
-          <FaBullseye />
-
-          <div>
-
-            <h3>OUR MISSION</h3>
-
-            <p>
-              To provide holistic education
-              through quality teaching,
-              discipline and leadership
-              development.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* HEAD TEACHER */}
-
-      <section className="headteacher-section">
-
-        <div className="message-card">
+        <div className="chairman-content">
 
           <span>MESSAGE</span>
 
           <h2>
-            Message From The
-            Head Teacher
+            Message From The Head Teacher
           </h2>
 
-          <blockquote>
+          <p>
             At Praise-El Junior School, we believe
             every child has unique potential.
             Through dedication, innovation and
             teamwork, we continue to provide a
             strong educational foundation that
             empowers our learners to excel.
-          </blockquote>
-
-          <h4>
-            Joyce Namagembe
-          </h4>
-
-          <p>
-            Head Teacher
           </p>
 
         </div>
 
-        <div className="headteacher-image">
-
-          <img
-            src={headteacher}
-            alt="Head Teacher"
-          />
-
-          <div className="teacher-badge">
-
-            <h4>
-              Dedicated.
-              <br />
-              Experienced.
-              <br />
-              Passionate.
-            </h4>
-
-          </div>
-
-        </div>
-
       </section>
 
-      {/* VALUES TIMELINE */}
+      <section className="teachers-section">
 
-      <section className="values-section">
-
-        <h2>OUR CORE VALUES</h2>
-
-        <div className="values-line">
-
-          <div className="value-item">
-            <FaChurch />
-            <h4>Faith</h4>
-          </div>
-
-          <div className="value-item">
-            <FaShieldAlt />
-            <h4>Discipline</h4>
-          </div>
-
-          <div className="value-item">
-            <FaTrophy />
-            <h4>Excellence</h4>
-          </div>
-
-          <div className="value-item">
-            <FaUserTie />
-            <h4>Leadership</h4>
-          </div>
-
-          <div className="value-item">
-            <FaHandshake />
-            <h4>Integrity</h4>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* TEACHERS BANNER */}
-
-      <section className="teachers-banner">
-
-        <div className="teachers-content">
-
-          <span>OUR EDUCATORS</span>
+        <div className="teacher-overlay">
 
           <h2>
-            Professional.
-            Passionate.
-            Dedicated To Excellence.
+            Our Professional Teachers
           </h2>
 
           <p>
-            Our teachers are qualified,
-            experienced and committed
-            to bringing out the best
-            in every child.
+            Dedicated educators committed to
+            academic excellence and learner success.
           </p>
-
-          <Link
-            to="/contact"
-            className="team-btn"
-          >
-            Meet Our Team
-            <FaArrowRight />
-          </Link>
 
         </div>
 
         <img
-          src={teachersImg}
+          src={teacherImg}
           alt="Teachers"
         />
-
-      </section>
-
-      {/* STATS */}
-
-      <section className="about-stats">
-
-        <div>
-          <FaGraduationCap />
-          <h3>500+</h3>
-          <p>Learners</p>
-        </div>
-
-        <div>
-          <FaUsers />
-          <h3>35+</h3>
-          <p>Teachers</p>
-        </div>
-
-        <div>
-          <FaTrophy />
-          <h3>98%</h3>
-          <p>Pass Rate</p>
-        </div>
-
-        <div>
-          <FaSchool />
-          <h3>15+</h3>
-          <p>Years Excellence</p>
-        </div>
-
-      </section>
-
-      {/* CTA */}
-
-      <section className="about-cta">
-
-        <div className="cta-left">
-
-          <h2>
-            Ready To Join
-            Praise-El Family?
-          </h2>
-
-          <p>
-            Give your child the gift of
-            quality education and a
-            bright future.
-          </p>
-
-        </div>
-
-        <div className="cta-buttons">
-
-          <Link
-            to="/admissions"
-            className="apply-btn"
-          >
-            APPLY NOW
-          </Link>
-
-          <Link
-            to="/contact"
-            className="contact-btn"
-          >
-            CONTACT US
-          </Link>
-
-        </div>
 
       </section>
 
