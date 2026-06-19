@@ -112,34 +112,34 @@ body{
 }
 
 .hero-content h1{
-    font-size:clamp(3.5rem,8vw,6.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
 
-    font-weight:800;
-    line-height:1;
+    font-weight: 800;
+    line-height: 1.1;
 
-    min-height:160px;
+    min-height: 120px;
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
     text-shadow:
         0 4px 20px rgba(0,0,0,.35);
 }
 
 .hero-content p{
-    font-size:clamp(1rem,2vw,1.35rem);
+    font-size: clamp(.95rem, 1.5vw, 1.15rem);
 
-    line-height:1.7;
+    line-height: 1.7;
 
-    max-width:650px;
+    max-width: 650px;
 
-    min-height:70px;
+    min-height: 60px;
 
-    color:rgba(255,255,255,.95);
+    color: rgba(255,255,255,.95);
 
-    margin-bottom:40px;
+    margin-bottom: 35px;
 }
 
 /* ===================================
