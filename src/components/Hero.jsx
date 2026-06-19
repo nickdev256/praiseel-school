@@ -8,7 +8,7 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-import heroBg from "../assets/hero2.jpg";
+import heroBg from "../assets/hero4.jpg";
 
 const Hero = () => {
   return (
