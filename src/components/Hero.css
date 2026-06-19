@@ -153,8 +153,9 @@
   width:90%;
   max-width:1370px;
 
-  bottom:20px;      /* was 60px */
-  height:135px;     /* was 120px */
+  bottom:110px; /* raises card closer to buttons */
+
+  height:135px;
 
   z-index:5;
 
