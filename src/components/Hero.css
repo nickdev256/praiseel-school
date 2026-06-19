@@ -7,8 +7,8 @@
 }
 
 .hero{
-  height:1050px;
-  min-height:1050px;
+  height:950px;
+  min-height:950px;
   background-size:cover;
   background-position:center;
   position:relative;
@@ -34,7 +34,7 @@
   position:relative;
   z-index:5;
    max-width:780px;
-  padding-top:260px;
+  padding-top:170px;
   padding-left:80px;
   
 }
@@ -58,7 +58,7 @@
 .hero-content h1{
   margin-top:25px;
 
- font-size:82px;
+ font-size:95px;
   line-height:.9;
   font-weight:800;
   
