@@ -7,13 +7,13 @@
 }
 
 .hero{
-  min-height:920vh;
+  height:950px;
+  min-height:950px;
   background-size:cover;
   background-position:center;
   position:relative;
   overflow:hidden;
   font-family:"Poppins",sans-serif;
-
   display:flex;
   align-items:flex-start;
 }
