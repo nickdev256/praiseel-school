@@ -255,7 +255,7 @@
    TABLET
 ========================= */
 
-@media(max-width:1200px){
+@media (max-width:1200px){
 
   .why-grid{
     grid-template-columns:repeat(2,1fr);
@@ -265,66 +265,74 @@
   .why-header h2{
     font-size:3.5rem;
   }
+
+  .icon-box{
+    width:110px;
+    height:110px;
+    font-size:2.6rem;
+  }
+
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
   .why-section{
     padding:80px 20px;
   }
 
   .why-header{
-    margin-bottom:60px;
+    margin-bottom:50px;
   }
 
   .why-header h2{
-    font-size:2.5rem;
+    font-size:2.4rem;
     line-height:1.2;
   }
 
   .why-header p{
     font-size:1rem;
+    line-height:1.8;
   }
 
   .header-lines span{
-    width:50px;
+    width:45px;
   }
 
   .why-grid{
-    display:flex;
-    flex-direction:column;
-    gap:35px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:30px;
     margin-top:40px;
   }
 
   .why-card{
-    width:100%;
-    min-height:320px;
+    position:relative;
 
     background:linear-gradient(
       135deg,
-      #02163d,
-      #032b69,
-      #02163d
+      #02163d 0%,
+      #032b69 50%,
+      #02163d 100%
     );
 
     border:1px solid rgba(244,180,0,.25);
+
     border-radius:30px;
 
-    padding:40px 25px;
+    padding:35px 25px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    min-height:auto;
 
     text-align:center;
 
-    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
   }
 
   .card-dots{
@@ -332,28 +340,27 @@
   }
 
   .icon-box{
-    position:relative;
-    top:auto;
-    left:auto;
-    transform:none;
+    position:static;
 
     width:auto;
     height:auto;
+
+    transform:none;
+
+    margin-bottom:20px;
 
     background:none;
     border:none;
     box-shadow:none;
 
-    color:#17e4c0;
+    color:#18e3c0;
 
     font-size:4rem;
-
-    margin-bottom:25px;
   }
 
   .why-card h3{
     color:#fff;
-    font-size:2rem;
+    font-size:1.8rem;
     margin-bottom:15px;
   }
 
@@ -363,7 +370,7 @@
 
   .why-card p{
     color:#fff;
-    font-size:1.05rem;
+    font-size:1rem;
     line-height:1.8;
     margin-bottom:0;
   }
@@ -373,10 +380,12 @@
   }
 
   .why-section::after{
-    width:420px;
-    height:420px;
+    width:400px;
+    height:400px;
+
     right:-180px;
-    top:-80px;
+    top:-100px;
+
     background:rgba(139,30,63,.08);
   }
 }
@@ -385,7 +394,7 @@
    SMALL PHONES
 ========================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
   .why-header h2{
     font-size:2rem;
@@ -396,19 +405,18 @@
   }
 
   .why-card{
-    min-height:290px;
-    padding:35px 20px;
+    padding:30px 20px;
   }
 
   .icon-box{
-    font-size:3.5rem;
+    font-size:3.2rem;
   }
 
   .why-card h3{
-    font-size:1.7rem;
+    font-size:1.5rem;
   }
 
   .why-card p{
-    font-size:1rem;
+    font-size:.95rem;
   }
 }
