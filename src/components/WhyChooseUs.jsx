@@ -1,18 +1,24 @@
 import {
-  FaUserGraduate,
   FaChalkboardTeacher,
-  FaShieldAlt,
   FaLaptopCode,
-  FaFutbol,
+  FaShieldAlt,
   FaAward,
+  FaFutbol,
+  FaCross,
+  FaUsers,
+  FaUserTie,
+  FaCalendarAlt,
   FaArrowRight,
 } from "react-icons/fa";
 
 import "./WhyChooseUs.css";
+import schoolKids from "../assets/school-kids.jpg";
 
 function WhyChooseUs() {
   return (
-    <section className="why-section">
+    <section className="why-choose-section">
+
+      {/* HEADER */}
 
       <div className="why-header">
 
@@ -20,205 +26,247 @@ function WhyChooseUs() {
           WHY CHOOSE PRAISE-EL
         </span>
 
-        <div className="header-lines">
-
-          <span></span>
-
-          <div className="header-icon">
-            <FaUserGraduate />
-          </div>
-
-          <span></span>
-
-        </div>
-
         <h2>
-          Providing Excellence In Education
+          Building Future Leaders
+          <br />
+          Through Excellence
         </h2>
 
         <p>
-          We are committed to nurturing confident,
-          disciplined and successful learners through
-          quality education and holistic development.
+          We provide a nurturing and stimulating environment where every
+          child discovers their potential and grows in character,
+          knowledge and faith.
         </p>
 
-        <div className="header-dots">
+      </div>
 
-          <span></span>
-          <span></span>
-          <span></span>
+      {/* MAIN CONTENT */}
+
+      <div className="why-content">
+
+        {/* LEFT IMAGE */}
+
+        <div className="why-image-wrapper">
+
+          <img
+            src={schoolKids}
+            alt="Praise-El Students"
+            className="why-image"
+          />
+
+          <div className="quote-card">
+
+            <span className="quote-mark">"</span>
+
+            <h3>
+              Nurturing hearts.
+              <br />
+              Building minds.
+              <br />
+              Shaping destiny.
+            </h3>
+
+          </div>
+
+        </div>
+
+        {/* RIGHT FEATURES */}
+
+        <div className="features-list">
+
+          <div className="timeline"></div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon teacher">
+              <FaChalkboardTeacher />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Qualified & Caring Teachers
+              </h4>
+
+              <p>
+                Experienced, passionate and dedicated teachers committed
+                to every child's success.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon learning">
+              <FaLaptopCode />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Modern Learning Experience
+              </h4>
+
+              <p>
+                ICT-enabled classrooms and innovative teaching methods
+                that make learning engaging and effective.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon safety">
+              <FaShieldAlt />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Safe & Secure Environment
+              </h4>
+
+              <p>
+                A well-secured child-friendly environment that promotes
+                confidence and peace of mind.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon award">
+              <FaAward />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Academic Excellence
+              </h4>
+
+              <p>
+                Strong academic culture that consistently delivers
+                outstanding results.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon sports">
+              <FaFutbol />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Sports & Co-Curricular Activities
+              </h4>
+
+              <p>
+                Opportunities to discover talents, build confidence and
+                develop teamwork.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="feature-row">
+
+            <div className="feature-icon christian">
+              <FaCross />
+            </div>
+
+            <div className="feature-content">
+
+              <h4>
+                Christian Values & Discipline
+              </h4>
+
+              <p>
+                Building strong character and moral values rooted in
+                Christian faith.
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
-      <div className="why-grid">
+      {/* STATS BAR */}
 
-        {/* CARD 1 */}
+      <div className="stats-bar">
 
-        <div className="why-card">
+        <div className="stat-box">
 
-          <div className="card-dots"></div>
-
-          <div className="icon-box">
-            <FaChalkboardTeacher />
+          <div className="stat-icon">
+            <FaUsers />
           </div>
 
-          <h3>
-            Qualified Teachers
-          </h3>
-
-          <div className="small-line"></div>
-
-          <p>
-            Dedicated and experienced teachers focused
-            on every child's academic and personal growth.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
+          <div>
+            <h3>500+</h3>
+            <span>LEARNERS</span>
+            <p>Growing and achieving every day</p>
+          </div>
 
         </div>
 
-        {/* CARD 2 */}
+        <div className="stat-box">
 
-        <div className="why-card">
-
-          <div className="card-dots"></div>
-
-          <div className="icon-box">
-            <FaLaptopCode />
+          <div className="stat-icon">
+            <FaUserTie />
           </div>
 
-          <h3>
-            Modern Learning
-          </h3>
-
-          <div className="small-line"></div>
-
-          <p>
-            Interactive learning supported by technology
-            and innovative teaching approaches.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
+          <div>
+            <h3>30+</h3>
+            <span>TEACHERS</span>
+            <p>Qualified, experienced and dedicated</p>
+          </div>
 
         </div>
 
-        {/* CARD 3 */}
+        <div className="stat-box">
 
-        <div className="why-card">
-
-          <div className="card-dots"></div>
-
-          <div className="icon-box">
-            <FaShieldAlt />
+          <div className="stat-icon">
+            <FaCalendarAlt />
           </div>
 
-          <h3>
-            Safe Environment
-          </h3>
-
-          <div className="small-line"></div>
-
-          <p>
-            A secure and nurturing school environment
-            where every learner feels valued.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
+          <div>
+            <h3>15+</h3>
+            <span>YEARS</span>
+            <p>Of impactful academic excellence</p>
+          </div>
 
         </div>
 
-        {/* CARD 4 */}
+        <div className="cta-box">
 
-        <div className="why-card">
+          <h4>
+            Join the Praise-El Family
+          </h4>
 
-          <div className="card-dots"></div>
+          <button>
 
-          <div className="icon-box">
-            <FaAward />
-          </div>
+            Discover More
 
-          <h3>
-            Academic Excellence
-          </h3>
+            <span>
+              <FaArrowRight />
+            </span>
 
-          <div className="small-line"></div>
-
-          <p>
-            Strong academic performance and consistent
-            learner achievement year after year.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
-
-        </div>
-
-        {/* CARD 5 */}
-
-        <div className="why-card">
-
-          <div className="card-dots"></div>
-
-          <div className="icon-box">
-            <FaFutbol />
-          </div>
-
-          <h3>
-            Co-Curricular Activities
-          </h3>
-
-          <div className="small-line"></div>
-
-          <p>
-            Sports, music, drama and clubs that develop
-            talents beyond the classroom.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
-
-        </div>
-
-        {/* CARD 6 */}
-
-        <div className="why-card">
-
-          <div className="card-dots"></div>
-
-          <div className="icon-box">
-            <FaUserGraduate />
-          </div>
-
-          <h3>
-            Holistic Development
-          </h3>
-
-          <div className="small-line"></div>
-
-          <p>
-            Building character, leadership and confidence
-            for lifelong success.
-          </p>
-
-          <a href="/about">
-            Learn More
-            <FaArrowRight />
-          </a>
+          </button>
 
         </div>
 

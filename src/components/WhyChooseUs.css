@@ -6,417 +6,522 @@
   box-sizing:border-box;
 }
 
-.why-section{
+.why-choose-section{
   position:relative;
-  padding:120px 6% 180px;
-  background:#f7f9fc;
+  padding:120px 5% 0;
+  background:#f8fafc;
   overflow:hidden;
   font-family:"Poppins",sans-serif;
 }
 
-/* =========================
+/* =====================
    BACKGROUND SHAPES
-========================= */
+===================== */
 
-.why-section::before{
+.why-choose-section::before{
   content:"";
   position:absolute;
-  left:-250px;
-  bottom:-250px;
+  top:0;
+  right:-250px;
+
   width:700px;
   height:700px;
+
   border-radius:50%;
   background:rgba(8,37,103,.04);
 }
 
-.why-section::after{
+.why-choose-section::after{
   content:"";
   position:absolute;
-  right:-250px;
-  top:-150px;
+  bottom:-300px;
+  left:-250px;
+
   width:700px;
   height:700px;
-  border-radius:50%;
 
-  /* LIGHT MAROON */
-  background:rgba(139,30,63,.06);
+  border-radius:50%;
+  background:#082567;
 }
 
-/* =========================
+/* =====================
    HEADER
-========================= */
+===================== */
 
 .why-header{
   position:relative;
   z-index:2;
-  max-width:1000px;
-  margin:0 auto 100px;
+
   text-align:center;
+  max-width:1000px;
+  margin:0 auto 70px;
 }
 
 .why-tag{
   display:block;
+
   color:#8B1E3F;
+
   font-size:1rem;
   font-weight:700;
+
   letter-spacing:4px;
   text-transform:uppercase;
-}
 
-.header-lines{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:25px;
-  margin:25px 0;
-}
-
-.header-lines span{
-  width:90px;
-  height:3px;
-  background:#f4b400;
-  border-radius:50px;
-}
-
-.header-icon{
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  background:#f4b400;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.5rem;
+  margin-bottom:20px;
 }
 
 .why-header h2{
   color:#082567;
-  font-size:4.5rem;
+
+  font-size:5.5rem;
   font-weight:800;
-  line-height:1.15;
+
+  line-height:1.05;
+
   margin-bottom:25px;
 }
 
 .why-header p{
-  color:#444;
-  font-size:1.2rem;
-  line-height:1.8;
-  max-width:800px;
+  max-width:850px;
   margin:auto;
+
+  font-size:1.25rem;
+  line-height:1.8;
+
+  color:#444;
 }
 
-.header-dots{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:30px;
-}
+/* =====================
+   MAIN GRID
+===================== */
 
-.header-dots span{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#f4b400;
-}
-
-/* =========================
-   GRID
-========================= */
-
-.why-grid{
+.why-content{
   position:relative;
   z-index:2;
-  max-width:1400px;
+
+  max-width:1450px;
   margin:auto;
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:80px 40px;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+
+  align-items:center;
 }
 
-/* =========================
-   CARD
-========================= */
+/* =====================
+   IMAGE
+===================== */
 
-.why-card{
+.why-image-wrapper{
   position:relative;
-  background:#fff;
-  border-radius:30px;
-  padding:90px 35px 35px;
-  text-align:center;
-
-  box-shadow:
-  0 15px 40px rgba(0,0,0,.08);
-
-  border-bottom:4px solid #f4b400;
-
-  transition:.35s ease;
 }
 
-.why-card:hover{
-  transform:translateY(-12px);
+.why-image{
+  width:100%;
+  height:540px;
+
+  object-fit:cover;
+
+  border-radius:40px;
+  border:3px solid #f4b400;
 }
 
-.card-dots{
+/* =====================
+   QUOTE BOX
+===================== */
+
+.quote-card{
   position:absolute;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-  width:140px;
-  height:60px;
-  opacity:.25;
 
-  background-image:
-  radial-gradient(#7f9ccf 2px, transparent 2px);
+  left:-35px;
+  bottom:-35px;
 
-  background-size:16px 16px;
+  width:320px;
+
+  background:#082567;
+
+  padding:40px;
+
+  border-radius:0 90px 0 40px;
+
+  color:#fff;
 }
 
-/* =========================
-   ICON
-========================= */
+.quote-mark{
+  display:block;
 
-.icon-box{
+  color:#f4b400;
+
+  font-size:4rem;
+  font-weight:800;
+
+  margin-bottom:10px;
+}
+
+.quote-card h3{
+  font-size:2rem;
+  font-weight:600;
+  line-height:1.5;
+}
+
+.quote-card::after{
+  content:"";
+
+  display:block;
+
+  width:60px;
+  height:4px;
+
+  background:#f4b400;
+
+  margin-top:20px;
+}
+
+/* =====================
+   FEATURES
+===================== */
+
+.features-list{
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:25px;
+}
+
+.timeline{
   position:absolute;
-  top:-60px;
-  left:50%;
-  transform:translateX(-50%);
 
-  width:120px;
-  height:120px;
+  left:34px;
+  top:10px;
+  bottom:10px;
+
+  width:2px;
+
+  background:#f4b400;
+}
+
+.feature-row{
+  display:flex;
+  gap:25px;
+
+  position:relative;
+}
+
+.feature-row:not(:last-child){
+  padding-bottom:18px;
+  border-bottom:1px solid #ececec;
+}
+
+.feature-icon{
+  width:70px;
+  height:70px;
+
+  flex-shrink:0;
 
   border-radius:50%;
 
-  background:#082567;
-  border:5px solid #f4b400;
-
-  color:#fff;
+  background:#fff;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:3rem;
+  font-size:1.7rem;
 
-  box-shadow:
-  0 15px 35px rgba(8,37,103,.25);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+  z-index:2;
 }
 
-.why-card h3{
-  color:#082567;
-  font-size:2rem;
-  font-weight:700;
-  margin-bottom:15px;
-}
-
-.small-line{
-  width:50px;
-  height:3px;
-  background:#f4b400;
-  border-radius:50px;
-  margin:0 auto 25px;
-}
-
-.why-card p{
-  color:#444;
-  font-size:1rem;
-  line-height:1.9;
-  margin-bottom:25px;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.why-card a{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
+.teacher{
   color:#8B1E3F;
+}
+
+.learning{
+  color:#1e63c8;
+}
+
+.safety{
+  color:#0d8a75;
+}
+
+.award{
+  color:#e6a000;
+}
+
+.sports{
+  color:#703a8e;
+}
+
+.christian{
+  color:#b0223d;
+}
+
+.feature-content h4{
+  color:#082567;
+
+  font-size:1.65rem;
+  font-weight:700;
+
+  margin-bottom:8px;
+}
+
+.feature-content p{
+  color:#555;
+
+  font-size:1rem;
+  line-height:1.7;
+}
+
+/* =====================
+   STATS BAR
+===================== */
+
+.stats-bar{
+  position:relative;
+  z-index:3;
+
+  margin-top:90px;
+
+  background:#082567;
+
+  padding:45px 60px;
+
+  display:grid;
+  grid-template-columns:
+  1fr
+  1fr
+  1fr
+  auto;
+
+  gap:30px;
+
+  align-items:center;
+}
+
+.stat-box{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.stat-icon{
+  font-size:3rem;
+  color:#f4b400;
+}
+
+.stat-box h3{
+  color:#fff;
+
+  font-size:4rem;
+  line-height:1;
+
+  margin-bottom:8px;
+}
+
+.stat-box span{
+  color:#f4b400;
+
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+.stat-box p{
+  margin-top:10px;
+
+  color:#fff;
+  opacity:.9;
+
+  font-size:.95rem;
+}
+
+/* CTA */
+
+.cta-box{
+  text-align:center;
+}
+
+.cta-box h4{
+  color:#f4b400;
+
+  font-size:1.8rem;
+  font-weight:500;
+
+  margin-bottom:20px;
+}
+
+.cta-box button{
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  border:none;
+
+  background:#8B1E3F;
+  color:#fff;
+
+  padding:18px 30px;
+
+  border-radius:12px;
+
   font-size:1rem;
   font-weight:700;
-  transition:.3s;
+
+  cursor:pointer;
 }
 
-.why-card a:hover{
-  color:#082567;
-}
+.cta-box button span{
+  width:35px;
+  height:35px;
 
-.why-card a svg{
-  width:30px;
-  height:30px;
-  border:2px solid #f4b400;
   border-radius:50%;
-  padding:6px;
+
+  background:#f4b400;
+  color:#082567;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* =====================
+   LAPTOP
+===================== */
 
-@media (max-width:1200px){
+@media(max-width:1200px){
 
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:80px 30px;
+  .why-header h2{
+    font-size:4.2rem;
   }
+
+  .why-content{
+    grid-template-columns:1fr;
+  }
+
+  .features-list{
+    margin-top:50px;
+  }
+
+  .stats-bar{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media(max-width:992px){
 
   .why-header h2{
     font-size:3.5rem;
   }
 
-  .icon-box{
-    width:110px;
-    height:110px;
-    font-size:2.6rem;
+  .quote-card{
+    position:relative;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+
+    margin-top:20px;
   }
 
+  .stats-bar{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .stat-box{
+    justify-content:center;
+  }
 }
 
-/* =========================
+/* =====================
    MOBILE
-========================= */
+===================== */
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-  .why-section{
-    padding:80px 20px;
-  }
-
-  .why-header{
-    margin-bottom:50px;
+  .why-choose-section{
+    padding:80px 20px 0;
   }
 
   .why-header h2{
-    font-size:2.4rem;
-    line-height:1.2;
+    font-size:2.6rem;
   }
 
   .why-header p{
     font-size:1rem;
-    line-height:1.8;
   }
 
-  .header-lines span{
-    width:45px;
+  .why-image{
+    height:350px;
   }
 
-  .why-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:30px;
-    margin-top:40px;
+  .timeline{
+    display:none;
   }
 
-  .why-card{
-    position:relative;
-
-    background:linear-gradient(
-      135deg,
-      #02163d 0%,
-      #032b69 50%,
-      #02163d 100%
-    );
-
-    border:1px solid rgba(244,180,0,.25);
-
-    border-radius:30px;
-
-    padding:35px 25px;
-
-    min-height:auto;
-
-    text-align:center;
-
-    display:flex;
+  .feature-row{
     flex-direction:column;
+    text-align:center;
     align-items:center;
-    justify-content:center;
   }
 
-  .card-dots{
-    display:none;
+  .feature-content h4{
+    font-size:1.4rem;
   }
 
-  .icon-box{
-    position:static;
-
-    width:auto;
-    height:auto;
-
-    transform:none;
-
-    margin-bottom:20px;
-
-    background:none;
-    border:none;
-    box-shadow:none;
-
-    color:#18e3c0;
-
-    font-size:4rem;
+  .quote-card h3{
+    font-size:1.5rem;
   }
 
-  .why-card h3{
-    color:#fff;
-    font-size:1.8rem;
-    margin-bottom:15px;
+  .stat-box{
+    flex-direction:column;
   }
 
-  .small-line{
-    display:none;
+  .stat-box h3{
+    font-size:3rem;
   }
 
-  .why-card p{
-    color:#fff;
-    font-size:1rem;
-    line-height:1.8;
-    margin-bottom:0;
-  }
-
-  .why-card a{
-    display:none;
-  }
-
-  .why-section::after{
-    width:400px;
-    height:400px;
-
-    right:-180px;
-    top:-100px;
-
-    background:rgba(139,30,63,.08);
+  .cta-box button{
+    margin:auto;
   }
 }
 
-/* =========================
+/* =====================
    SMALL PHONES
-========================= */
+===================== */
 
-@media (max-width:480px){
+@media(max-width:480px){
 
   .why-header h2{
     font-size:2rem;
   }
 
-  .why-header p{
-    font-size:.95rem;
+  .why-image{
+    height:280px;
   }
 
-  .why-card{
-    padding:30px 20px;
+  .quote-card{
+    padding:25px;
   }
 
-  .icon-box{
-    font-size:3.2rem;
+  .quote-card h3{
+    font-size:1.25rem;
   }
 
-  .why-card h3{
-    font-size:1.5rem;
+  .feature-content h4{
+    font-size:1.2rem;
   }
 
-  .why-card p{
-    font-size:.95rem;
+  .stat-box h3{
+    font-size:2.5rem;
   }
 }
