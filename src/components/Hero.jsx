@@ -8,7 +8,7 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 
-import heroBg from "../assets/hero-bg.jpg";
+import heroBg from "../assets/hero2.jpg";
 
 const Hero = () => {
   return (
@@ -16,6 +16,7 @@ const Hero = () => {
       className="hero"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
+      {/* HERO CONTENT */}
       <div className="hero-content">
         <div className="admission-badge">
           <FaGraduationCap />
@@ -53,6 +54,7 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* FEATURES */}
       <div className="features-container">
         <div className="feature-item">
           <div className="feature-icon">
@@ -87,7 +89,7 @@ const Hero = () => {
 
           <div>
             <h4>Holistic Growth</h4>
-            <p>Building character confidence & creativity</p>
+            <p>Building character, confidence & creativity</p>
           </div>
         </div>
 
