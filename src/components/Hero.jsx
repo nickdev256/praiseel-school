@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
+
 import {
   FaArrowRight,
   FaGraduationCap,
@@ -38,25 +40,25 @@ const Hero = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="apply-btn">
+          <Link to="/apply-online" className="apply-btn">
             Apply Now
             <span>
               <FaArrowRight />
             </span>
-          </button>
+          </Link>
 
-          <button className="discover-btn">
+          <Link to="/about" className="discover-btn">
             Discover More
             <span>
               <FaArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
 
       {/* FEATURES */}
       <div className="features-container">
-        <div className="feature-item">
+        <Link to="/admissions" className="feature-item">
           <div className="feature-icon">
             <FaGraduationCap />
           </div>
@@ -65,11 +67,11 @@ const Hero = () => {
             <h4>Quality Education</h4>
             <p>Strong academic foundation</p>
           </div>
-        </div>
+        </Link>
 
         <div className="divider"></div>
 
-        <div className="feature-item">
+        <Link to="/about" className="feature-item">
           <div className="feature-icon">
             <FaShieldAlt />
           </div>
@@ -78,11 +80,11 @@ const Hero = () => {
             <h4>Safe Environment</h4>
             <p>A secure and caring learning space</p>
           </div>
-        </div>
+        </Link>
 
         <div className="divider"></div>
 
-        <div className="feature-item">
+        <Link to="/about" className="feature-item">
           <div className="feature-icon">
             <FaUsers />
           </div>
@@ -91,11 +93,11 @@ const Hero = () => {
             <h4>Holistic Growth</h4>
             <p>Building character, confidence & creativity</p>
           </div>
-        </div>
+        </Link>
 
         <div className="divider"></div>
 
-        <div className="feature-item">
+        <Link to="/gallery" className="feature-item">
           <div className="feature-icon">
             <FaTrophy />
           </div>
@@ -104,7 +106,7 @@ const Hero = () => {
             <h4>Excellence Always</h4>
             <p>Preparing leaders of tomorrow</p>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );
