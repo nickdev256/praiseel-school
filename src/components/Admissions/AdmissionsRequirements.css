@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .requirements {
     padding: 100px 8%;
     background: #f9fafb;
@@ -66,5 +67,51 @@
 
     .requirements-card li {
         font-size: 1rem;
+=======
+.requirements{
+    padding:100px 8%;
+}
+
+.requirements-card{
+    max-width:900px;
+    margin:auto;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.requirements-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.requirements-card li{
+    padding:18px 0;
+
+    border-bottom:1px solid #eee;
+
+    font-size:1.1rem;
+
+    color:#444;
+}
+
+.requirements-card li::before{
+    content:"✓ ";
+    color:#8B1E3F;
+    font-weight:700;
+    margin-right:10px;
+}
+
+@media(max-width:768px){
+
+    .requirements-card{
+        padding:30px;
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
     }
 }

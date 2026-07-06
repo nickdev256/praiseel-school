@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import "./AdmissionsFAQ.css";
 
@@ -27,6 +28,11 @@ function AdmissionsFAQ() {
     }
   ];
 
+=======
+import "./AdmissionsFAQ.css";
+
+function AdmissionsFAQ() {
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
   return (
     <section className="faq">
 
@@ -37,6 +43,7 @@ function AdmissionsFAQ() {
 
       <div className="faq-list">
 
+<<<<<<< HEAD
         {faqs.map((item, index) => (
           <div
             key={index}
@@ -54,6 +61,23 @@ function AdmissionsFAQ() {
             )}
           </div>
         ))}
+=======
+        <div className="faq-item">
+          When are admissions open?
+        </div>
+
+        <div className="faq-item">
+          Do you provide meals?
+        </div>
+
+        <div className="faq-item">
+          Do you provide transport?
+        </div>
+
+        <div className="faq-item">
+          Can I transfer mid-term?
+        </div>
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
 
       </div>
 

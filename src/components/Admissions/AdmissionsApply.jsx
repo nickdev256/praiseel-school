@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import {
   FaArrowRight,
   FaFileDownload,
@@ -7,11 +8,14 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
+=======
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
 import "./AdmissionsApply.css";
 
 function AdmissionsApply() {
   return (
     <section className="apply-section">
+<<<<<<< HEAD
       <div className="apply-overlay"></div>
 
       <div className="apply-container">
@@ -70,6 +74,31 @@ function AdmissionsApply() {
           </div>
         </div>
       </div>
+=======
+
+      <div className="apply-card">
+
+        <span>ONLINE APPLICATION</span>
+
+        <h2>
+          Ready To Join Praise-El?
+        </h2>
+
+        <p>
+          Complete our online application form
+          and our admissions team will contact you.
+        </p>
+
+        <Link
+          to="/apply-online"
+          className="apply-btn"
+        >
+          Apply Online
+        </Link>
+
+      </div>
+
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
     </section>
   );
 }

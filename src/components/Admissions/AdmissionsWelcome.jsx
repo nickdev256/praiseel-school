@@ -4,6 +4,7 @@ function AdmissionsWelcome() {
   return (
     <section className="admissions-welcome">
 
+<<<<<<< HEAD
       <div className="overlay"></div>
 
       <div className="container">
@@ -23,6 +24,22 @@ function AdmissionsWelcome() {
           <span>✔ Experienced Teachers</span>
         </div>
 
+=======
+      <div className="container">
+
+        <span>WELCOME</span>
+
+        <h2>
+          Admissions At Praise-El
+        </h2>
+
+        <p>
+          We welcome applications from families
+          seeking quality Nursery and Primary
+          education for their children.
+        </p>
+
+>>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
       </div>
 
     </section>
