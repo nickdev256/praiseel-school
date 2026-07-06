@@ -1,0 +1,64 @@
+.adm-programs{
+    padding:100px 8%;
+    background:#f8f9fc;
+}
+
+.programs-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.program-card{
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.program-card:hover{
+    transform:translateY(-10px);
+}
+
+.program-card h3{
+    color:#082567;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.program-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.program-card li{
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+    color:#555;
+}
+
+.program-card li::before{
+    content:"✓ ";
+    color:#8B1E3F;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+    .programs-grid{
+        grid-template-columns:1fr;
+    }
+
+    .program-card{
+        padding:30px;
+    }
+}

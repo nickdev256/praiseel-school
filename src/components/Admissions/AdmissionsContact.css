@@ -1,0 +1,64 @@
+.adm-contact {
+    padding: 100px 8%;
+}
+
+.contact-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Better targeting than generic div */
+.contact-item {
+    background: white;
+    padding: 40px;
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon styling */
+.contact-item svg {
+    font-size: 2.5rem;
+    color: #8B1E3F;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.contact-item p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 2rem !important;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .adm-contact {
+        padding: 70px 5%;
+    }
+}

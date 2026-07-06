@@ -1,0 +1,35 @@
+.apply-faq{
+    padding:100px 8%;
+    background:#f8f9fc;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-box{
+    background:white;
+
+    padding:25px 30px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.faq-question{
+    font-weight:700;
+    color:#082567;
+}
+
+.faq-box p{
+    margin-top:15px;
+    color:#666;
+    line-height:1.8;
+}

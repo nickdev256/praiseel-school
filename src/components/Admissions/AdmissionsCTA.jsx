@@ -1,0 +1,24 @@
+import { Link } from "react-router-dom";
+import "./AdmissionsCTA.css";
+
+function AdmissionsCTA() {
+  return (
+    <section className="adm-cta">
+
+      <div className="cta-content">
+
+        <h2>Ready To Join Praise-El?</h2>
+
+        <p>Admissions for 2026 are now open</p>
+
+        <Link to="/apply-online" className="cta-btn">
+          Apply Now
+        </Link>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default AdmissionsCTA;
