@@ -1,136 +1,87 @@
 import {
   FaPhoneAlt,
   FaEnvelope,
-  FaMapMarkerAlt,
-  FaClock
+  FaMapMarkerAlt
 } from "react-icons/fa";
 
 import "./Contact.css";
+import contactHero from "../assets/contact.jpg";
 
 function Contact() {
-  const contactDetails = [
-    {
-      icon: <FaPhoneAlt />,
-      title: "Phone",
-      text: "0756070601"
-    },
-    {
-      icon: <FaEnvelope />,
-      title: "Email",
-      text: "info.praiseeljuniorschool256@gmail.com"
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: "Location",
-      text: "Mukono, Uganda"
-    },
-    {
-      icon: <FaClock />,
-      title: "Office Hours",
-      text: "Mon - Fri : 8:00AM - 5:00PM"
-    }
-  ];
 
   return (
-    <section className="contact-section">
+    <>
+
+      {/* HERO */}
+
+      <section
+        className="contact-hero"
+        style={{
+          backgroundImage:`url(${contactHero})`
+        }}
+      >
+
+        <div className="contact-overlay"></div>
 
 
-      <div className="contact-header">
+        <div className="contact-hero-content">
 
-        <span>CONTACT PRAISE-EL</span>
-
-        <h2>
-          Let's Connect With Our School
-        </h2>
-
-        <p>
-          Have questions about admissions, school visits,
-          or learning programs? Our team is ready to assist you.
-        </p>
-
-      </div>
+          <span>
+            CONTACT PRAISE-EL
+          </span>
 
 
-      <div className="contact-container">
+          <h1>
+            We Are Here To Support
+            Your Child's Future
+          </h1>
 
 
-        <div className="contact-info">
-
-          <h3>
-            Get In Touch
-          </h3>
-
-
-          {
-            contactDetails.map((item,index)=>(
-              <div className="info-box" key={index}>
-
-                <div className="icon">
-                  {item.icon}
-                </div>
-
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                </div>
-
-              </div>
-            ))
-          }
-
-        </div>
+          <p>
+            Have questions about admissions,
+            school programs, or visits?
+            Our team is ready to help you.
+          </p>
 
 
+          <div className="quick-contact">
 
-        <div className="contact-form">
-
-          <h3>
-            Send Us A Message
-          </h3>
-
-          <form>
-
-            <div className="form-group">
-
-              <input 
-                type="text"
-                placeholder="Your Name"
-              />
-
-
-              <input 
-                type="email"
-                placeholder="Email Address"
-              />
-
+            <div>
+              <FaPhoneAlt/>
+              <p>0756070601</p>
             </div>
 
 
-            <input
-              type="text"
-              placeholder="Subject"
-            />
+            <div>
+              <FaEnvelope/>
+              <p>Email Us</p>
+            </div>
 
 
-            <textarea
-              rows="6"
-              placeholder="Write your message..."
-            ></textarea>
+            <div>
+              <FaMapMarkerAlt/>
+              <p>Mukono, Uganda</p>
+            </div>
 
+          </div>
 
-            <button>
-              Send Message
-            </button>
-
-
-          </form>
 
         </div>
 
 
-      </div>
+      </section>
 
-    </section>
+
+
+      {/* YOUR CONTACT SECTION */}
+
+      <section className="contact-section">
+
+        {/* existing contact form and information */}
+
+      </section>
+
+    </>
   );
 }
 
