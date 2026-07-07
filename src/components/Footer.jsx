@@ -118,9 +118,9 @@ function Footer() {
               0756 070 601
             </a>
 
-            <a href="mailto:info@praiseel.ac.ug">
+            <a href="mailto:info.praiseeljuniorschool256@gmail.com  ">
               <FaEnvelope />
-              info@praiseel.ac.ug
+              info.praiseeljuniorschool256@gmail.com
             </a>
 
           </div>

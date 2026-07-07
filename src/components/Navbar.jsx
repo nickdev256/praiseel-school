@@ -27,7 +27,7 @@ function Navbar() {
 
           <span>
             <FaEnvelope />
-            info@praiseel.ac.ug
+            info.praiseeljuniorschool256@gmail.com
           </span>
         </div>
 

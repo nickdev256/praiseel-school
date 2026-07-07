@@ -40,7 +40,7 @@ function Contact() {
 
             <div>
               <h4>Phone</h4>
-              <p>+256 700 000 000</p>
+              <p>0756070601</p>
             </div>
 
           </div>
@@ -51,7 +51,7 @@ function Contact() {
 
             <div>
               <h4>Email</h4>
-              <p>info@praiseel.ac.ug</p>
+              <p>info.praiseeljuniorschool256@gmail.com</p>
             </div>
 
           </div>
