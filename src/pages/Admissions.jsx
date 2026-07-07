@@ -1,7 +1,7 @@
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 
-import AdmissionsHero from "../components/Admissions/AdmissionsHero";
+
 import AdmissionsWelcome from "../components/Admissions/AdmissionsWelcome";
 import AdmissionsWhy from "../components/Admissions/AdmissionsWhy";
 import AdmissionsProcess from "../components/Admissions/AdmissionsProcess";
