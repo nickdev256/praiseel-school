@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .adm-contact {
     padding: 100px 8%;
 }
@@ -54,14 +54,14 @@
     .section-title h2 {
         font-size: 2rem !important;
     }
-
+}
     .section-title {
         margin-bottom: 40px;
     }
 
     .adm-contact {
         padding: 70px 5%;
-=======
+    }
 .adm-contact{
     padding:100px 8%;
 }
@@ -118,6 +118,5 @@
 
     .section-title{
         margin-bottom:40px;
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
     }
 }

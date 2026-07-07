@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
+
 import {
   FaArrowRight,
   FaFileDownload,
@@ -8,14 +8,12 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
-=======
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
 import "./AdmissionsApply.css";
 
 function AdmissionsApply() {
   return (
     <section className="apply-section">
-<<<<<<< HEAD
+
       <div className="apply-overlay"></div>
 
       <div className="apply-container">
@@ -74,7 +72,7 @@ function AdmissionsApply() {
           </div>
         </div>
       </div>
-=======
+
 
       <div className="apply-card">
 
@@ -98,7 +96,6 @@ function AdmissionsApply() {
 
       </div>
 
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
     </section>
   );
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .adm-cta {
     padding: 100px 8%;
     background: linear-gradient(135deg, #8B1E3F, #5a0f26);
@@ -38,7 +38,9 @@
 .cta-btn:hover {
     transform: translateY(-5px);
     background: #f5f5f5;
-=======
+}
+
+
 .adm-cta{
     background:#082567;
     color:white;
@@ -75,5 +77,5 @@
     .section-title{
         margin-bottom:40px;
     }
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
+
 }

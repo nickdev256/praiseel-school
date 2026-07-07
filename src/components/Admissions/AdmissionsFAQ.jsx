@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 import { useState } from "react";
 import "./AdmissionsFAQ.css";
 
 function AdmissionsFAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null)};
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -28,11 +28,10 @@ function AdmissionsFAQ() {
     }
   ];
 
-=======
+
 import "./AdmissionsFAQ.css";
 
 function AdmissionsFAQ() {
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
   return (
     <section className="faq">
 
@@ -43,7 +42,7 @@ function AdmissionsFAQ() {
 
       <div className="faq-list">
 
-<<<<<<< HEAD
+
         {faqs.map((item, index) => (
           <div
             key={index}
@@ -61,7 +60,7 @@ function AdmissionsFAQ() {
             )}
           </div>
         ))}
-=======
+
         <div className="faq-item">
           When are admissions open?
         </div>
@@ -77,7 +76,6 @@ function AdmissionsFAQ() {
         <div className="faq-item">
           Can I transfer mid-term?
         </div>
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
 
       </div>
 

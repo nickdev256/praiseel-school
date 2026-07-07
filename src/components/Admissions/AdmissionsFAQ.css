@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .faq {
     padding: 100px 8%;
 }
@@ -39,7 +39,8 @@
 /* Active state */
 .faq-item.active {
     border-left: 4px solid #8B1E3F;
-=======
+
+}
 .faq{
     padding:100px 8%;
     background:#f8f9fc;
@@ -72,5 +73,4 @@
 .faq-item:hover{
     border-left:5px solid #8B1E3F;
     transform:translateX(8px);
->>>>>>> 59323cb84f3c081155a6f4945fc50d83cd636cc3
 }
