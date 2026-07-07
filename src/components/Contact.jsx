@@ -8,119 +8,125 @@ import {
 import "./Contact.css";
 
 function Contact() {
+  const contactDetails = [
+    {
+      icon: <FaPhoneAlt />,
+      title: "Phone",
+      text: "0756070601"
+    },
+    {
+      icon: <FaEnvelope />,
+      title: "Email",
+      text: "info.praiseeljuniorschool256@gmail.com"
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "Location",
+      text: "Mukono, Uganda"
+    },
+    {
+      icon: <FaClock />,
+      title: "Office Hours",
+      text: "Mon - Fri : 8:00AM - 5:00PM"
+    }
+  ];
+
   return (
     <section className="contact-section">
 
+
       <div className="contact-header">
 
-        <span>CONTACT US</span>
+        <span>CONTACT PRAISE-EL</span>
 
         <h2>
-          We'd Love To Hear From You
+          Let's Connect With Our School
         </h2>
 
         <p>
-          Reach out to us for admissions,
-          inquiries or school visits.
+          Have questions about admissions, school visits,
+          or learning programs? Our team is ready to assist you.
         </p>
 
       </div>
 
+
       <div className="contact-container">
 
-        {/* CONTACT INFO */}
 
         <div className="contact-info">
 
-          <h3>Get In Touch</h3>
+          <h3>
+            Get In Touch
+          </h3>
 
-          <div className="info-box">
 
-            <FaPhoneAlt className="icon" />
+          {
+            contactDetails.map((item,index)=>(
+              <div className="info-box" key={index}>
 
-            <div>
-              <h4>Phone</h4>
-              <p>0756070601</p>
-            </div>
+                <div className="icon">
+                  {item.icon}
+                </div>
 
-          </div>
+                <div>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
 
-          <div className="info-box">
-
-            <FaEnvelope className="icon" />
-
-            <div>
-              <h4>Email</h4>
-              <p>info.praiseeljuniorschool256@gmail.com</p>
-            </div>
-
-          </div>
-
-          <div className="info-box">
-
-            <FaMapMarkerAlt className="icon" />
-
-            <div>
-              <h4>Location</h4>
-              <p>Mukono, Uganda</p>
-            </div>
-
-          </div>
-
-          <div className="info-box">
-
-            <FaClock className="icon" />
-
-            <div>
-              <h4>Office Hours</h4>
-              <p>Mon - Fri : 8:00AM - 5:00PM</p>
-            </div>
-
-          </div>
+              </div>
+            ))
+          }
 
         </div>
 
-        {/* CONTACT FORM */}
+
 
         <div className="contact-form">
+
+          <h3>
+            Send Us A Message
+          </h3>
 
           <form>
 
             <div className="form-group">
 
-              <input
+              <input 
                 type="text"
-                placeholder="Full Name"
-                required
+                placeholder="Your Name"
               />
 
-              <input
+
+              <input 
                 type="email"
                 placeholder="Email Address"
-                required
               />
 
             </div>
 
+
             <input
               type="text"
               placeholder="Subject"
-              required
             />
+
 
             <textarea
               rows="6"
-              placeholder="Your Message"
-              required
+              placeholder="Write your message..."
             ></textarea>
 
-            <button type="submit">
+
+            <button>
               Send Message
             </button>
+
 
           </form>
 
         </div>
+
 
       </div>
 
