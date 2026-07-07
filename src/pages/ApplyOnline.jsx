@@ -11,7 +11,7 @@ import AdmissionsContact from "../components/Admissions/AdmissionsContact";
 function ApplyOnline() {
   return (
     <>
-      <Navbar />
+    
 
       <ApplyHero />
 
