@@ -1,16 +1,26 @@
 import "./AdmissionsWelcome.css";
+import hero from "../../assets/hero1.jpg";
 
 function AdmissionsWelcome() {
   return (
-    <section className="admissions-welcome">
+    <section
+      className="admissions-welcome"
+      style={{
+        backgroundImage: `url(${hero})`
+      }}
+    >
 
       <div className="overlay"></div>
 
       <div className="container">
 
-        <span className="subtitle">ADMISSIONS 2026</span>
+        <span className="subtitle">
+          ADMISSIONS 2026
+        </span>
 
-        <h1>Join Praise-El Nursery & Primary School</h1>
+        <h1>
+          Join Praise-El Nursery & Primary School
+        </h1>
 
         <p>
           We warmly welcome applications from families seeking a strong academic foundation,

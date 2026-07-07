@@ -15,9 +15,7 @@ import AdmissionsCTA from "../components/Admissions/AdmissionsCTA";
 function Admissions() {
   return (
     <>
-      <Navbar />
 
-      <AdmissionsHero />
 
       <AdmissionsWelcome />
 
