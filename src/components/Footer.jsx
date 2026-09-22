@@ -1,24 +1,55 @@
 import { Link } from "react-router-dom";
-import "./Footer.css";
+
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaGraduationCap,
+  FaHeart,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+  FaPhoneAlt,
+  FaShieldAlt,
+  FaUsers,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 import logo from "../assets/logo1.png";
 import footerBg from "../assets/footer-bg.jpg";
 
-import {
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-  FaEnvelope,
-  FaGraduationCap,
-  FaShieldAlt,
-  FaUsers,
-  FaHeart,
-  FaPaperPlane,
-} from "react-icons/fa";
+import "./Footer.css";
+
+/* ============================================================
+   CONTACT LINKS
+============================================================ */
+
+const whatsappNumber = "256744523317";
+
+const whatsappMessage = encodeURIComponent(
+  "Hello Praise-El Junior School. I would like to learn more about the school and admissions."
+);
+
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+/* ============================================================
+   FOOTER
+============================================================ */
 
 function Footer() {
+  function handleNewsletterSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const email = formData.get("email");
+
+    if (!email) {
+      return;
+    }
+
+    form.reset();
+  }
+
   return (
     <footer
       className="footer"
@@ -27,22 +58,30 @@ function Footer() {
       }}
     >
       <div className="footer-overlay">
-
-        {/* TOP LOGO */}
+        {/* ====================================================
+            TOP LOGO
+        ===================================================== */}
 
         <div className="footer-top-logo">
-          <img src={logo} alt="Praise-El Junior School" />
+          <Link
+            to="/"
+            aria-label="Go to the Praise-El Junior School homepage"
+          >
+            <img
+              src={logo}
+              alt="Praise-El Junior School"
+            />
+          </Link>
         </div>
 
-        {/* MAIN CONTENT */}
+        {/* ====================================================
+            MAIN FOOTER CONTENT
+        ===================================================== */}
 
         <div className="footer-main">
-
-          {/* BRAND */}
+          {/* SCHOOL BRAND */}
 
           <div className="footer-brand">
-
-
             <h2>
               Praise-El
               <br />
@@ -50,93 +89,130 @@ function Footer() {
             </h2>
 
             <span className="footer-motto">
-              Aspiring For Excellence
+              Aspiring for Excellence
             </span>
 
             <p>
-              Nurturing young minds through
-              quality education, discipline,
-              leadership and character
-              development.
+              Nurturing young minds through quality
+              education, discipline, leadership and
+              character development.
             </p>
 
             <div className="footer-values">
-
               <div>
-                <FaGraduationCap />
+                <FaGraduationCap aria-hidden="true" />
                 <span>Quality Education</span>
               </div>
 
               <div>
-                <FaShieldAlt />
+                <FaShieldAlt aria-hidden="true" />
                 <span>Strong Values</span>
               </div>
 
               <div>
-                <FaUsers />
+                <FaUsers aria-hidden="true" />
                 <span>Bright Futures</span>
               </div>
-
             </div>
-
           </div>
 
-          {/* LINKS */}
+          {/* QUICK LINKS */}
 
-          <div className="footer-links">
-
+          <nav
+            className="footer-links"
+            aria-label="Footer navigation"
+          >
             <h3>Quick Links</h3>
 
             <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/academics">Academics</Link>
-            <Link to="/gallery">Gallery</Link>
-            <Link to="/admissions">Admissions</Link>
-            <Link to="/news">News & Events</Link>
-            <Link to="/contact">Contact Us</Link>
 
-          </div>
+            <Link to="/about">
+              About Us
+            </Link>
 
-          {/* CONTACT */}
+            <Link to="/admissions">
+              Admissions
+            </Link>
+
+            <Link to="/apply-online">
+              Apply Online
+            </Link>
+
+            <Link to="/gallery">
+              Gallery
+            </Link>
+
+            <Link to="/contact">
+              Contact Us
+            </Link>
+          </nav>
+
+          {/* CONTACT INFORMATION */}
 
           <div className="footer-contact">
-
             <h3>Contact Us</h3>
 
-            <a href="tel:0744523317">
-              <FaPhoneAlt />
-              0744 523 317
+            <a href="tel:+256744523317">
+              <FaPhoneAlt aria-hidden="true" />
+
+              <span>
+                +256 744 523 317
+              </span>
             </a>
 
-            <a href="tel:0786971859">
-              <FaPhoneAlt />
-              0786 971 859
+            <a href="tel:+256786971859">
+              <FaPhoneAlt aria-hidden="true" />
+
+              <span>
+                +256 786 971 859
+              </span>
             </a>
 
-            <a href="tel:0756070601">
-              <FaPhoneAlt />
-              0756 070 601
+            <a href="tel:+256756070601">
+              <FaPhoneAlt aria-hidden="true" />
+
+              <span>
+                +256 756 070 601
+              </span>
             </a>
 
-            <a href="mailto:info.praiseeljuniorschool256@gmail.com  ">
-              <FaEnvelope />
-              info.praiseeljuniorschool256@gmail.com
+            {/* WHATSAPP CONTACT */}
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-whatsapp-link"
+              aria-label="Chat with Praise-El Junior School on WhatsApp"
+            >
+              <FaWhatsapp aria-hidden="true" />
+
+              <span>
+                WhatsApp: +256 744 523 317
+              </span>
             </a>
 
+            {/* EMAIL */}
+
+            <a href="mailto:info.praiseeljuniorschool256@gmail.com">
+              <FaEnvelope aria-hidden="true" />
+
+              <span>
+                info.praiseeljuniorschool256@gmail.com
+              </span>
+            </a>
           </div>
 
-          {/* LOCATION */}
+          {/* LOCATION AND SOCIAL MEDIA */}
 
           <div className="footer-location">
-
             <h3>Our Location</h3>
 
             <div className="location-box">
-
-              <FaMapMarkerAlt />
+              <FaMapMarkerAlt aria-hidden="true" />
 
               <p>
-                Kokoola-Kalagi,
+                Kokoola–Kalagi,
                 <br />
                 Along Gayaza Road,
                 <br />
@@ -144,94 +220,138 @@ function Footer() {
                 <br />
                 Uganda
               </p>
-
             </div>
 
             <h4>Follow Us</h4>
 
             <div className="socials">
-
-              <a href="#">
-                <FaFacebookF />
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Praise-El Junior School on Facebook"
+              >
+                <FaFacebookF aria-hidden="true" />
               </a>
 
-              <a href="#">
-                <FaInstagram />
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Praise-El Junior School on Instagram"
+              >
+                <FaInstagram aria-hidden="true" />
               </a>
 
-              <a href="#">
-                <FaWhatsapp />
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Praise-El Junior School on WhatsApp"
+              >
+                <FaWhatsapp aria-hidden="true" />
               </a>
-
             </div>
-
           </div>
-
         </div>
 
-        {/* NEWSLETTER */}
+        {/* ====================================================
+            NEWSLETTER
+        ===================================================== */}
 
         <div className="newsletter">
-
           <div className="newsletter-left">
-
             <div className="newsletter-icon">
-              <FaEnvelope />
+              <FaEnvelope aria-hidden="true" />
             </div>
 
             <div>
               <h4>Stay Connected</h4>
 
               <p>
-                Subscribe for school updates
-                and events.
+                Subscribe for school updates and events.
               </p>
             </div>
-
           </div>
 
-          <form className="newsletter-form">
+          <form
+            className="newsletter-form"
+            onSubmit={handleNewsletterSubmit}
+          >
+            <label
+              htmlFor="footer-newsletter-email"
+              className="sr-only"
+            >
+              Email address
+            </label>
 
             <input
+              id="footer-newsletter-email"
+              name="email"
               type="email"
               placeholder="Enter your email address"
+              autoComplete="email"
+              required
             />
 
             <button type="submit">
-              Subscribe
-              <FaPaperPlane />
+              <span>Subscribe</span>
+              <FaPaperPlane aria-hidden="true" />
             </button>
-
           </form>
 
           <div className="newsletter-quote">
-            “Every child is unique.
-            Every dream is important.”
+            “Every child is unique. Every dream is
+            important.”
           </div>
-
         </div>
 
-        {/* BOTTOM */}
+        {/* ====================================================
+            FOOTER BOTTOM
+        ===================================================== */}
 
         <div className="footer-bottom">
-
           <p>
-            © 2026 Praise-El Junior School.
-            All Rights Reserved.
+            © {new Date().getFullYear()} Praise-El Junior
+            School. All Rights Reserved.
           </p>
 
-          <div className="footer-heart">
+          <div
+            className="footer-heart"
+            aria-hidden="true"
+          >
             <FaHeart />
           </div>
 
           <p>
-            Designed by
-            <span> Eth Tech Solutions</span>
+            Designed by{" "}
+            <a
+              href="https://www.ethtechsolutions.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Eth Tech Solutions
+            </a>
           </p>
-
         </div>
-
       </div>
+
+      {/* ======================================================
+          FLOATING WHATSAPP BUTTON
+      ======================================================= */}
+
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-floating-whatsapp"
+        aria-label="Chat with Praise-El Junior School on WhatsApp"
+        title="Chat with us on WhatsApp"
+      >
+        <FaWhatsapp aria-hidden="true" />
+
+        <span>Chat with us</span>
+      </a>
     </footer>
   );
 }
