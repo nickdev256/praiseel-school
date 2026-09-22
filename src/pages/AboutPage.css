@@ -1,172 +1,1584 @@
-.about-page{
-    background:#fff;
+/* ============================================================
+   PRAISE-EL JUNIOR SCHOOL — ABOUT PAGE
+============================================================ */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+);
+
+.pa-page {
+  --pa-navy: #061c38;
+  --pa-navy-light: #0c315c;
+  --pa-burgundy: #8b1e3f;
+  --pa-burgundy-dark: #68132f;
+  --pa-burgundy-light: #a82450;
+  --pa-gold: #e9b23a;
+  --pa-gold-light: #f7c95b;
+  --pa-ivory: #faf7f0;
+  --pa-white: #ffffff;
+  --pa-heading: #0b294c;
+  --pa-text: #536276;
+  --pa-muted: #768397;
+  --pa-border: rgba(6, 28, 56, 0.12);
+  --pa-shadow: 0 18px 45px rgba(6, 28, 56, 0.12);
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: var(--pa-text);
+  background: var(--pa-white);
+
+  font-family: "DM Sans", Arial, sans-serif;
+  overflow: hidden;
 }
 
-.about-hero{
-    height:70vh;
-
-    background-size:cover;
-    background-position:center;
-
-    position:relative;
+.pa-page *,
+.pa-page *::before,
+.pa-page *::after {
+  box-sizing: border-box;
 }
 
-.about-overlay{
-    position:absolute;
-    inset:0;
-
-    background:rgba(0,0,0,.45);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-    text-align:center;
+.pa-page img {
+  max-width: 100%;
 }
 
-.about-overlay span{
-    color:#F4B400;
-    letter-spacing:3px;
+.pa-page a {
+  color: inherit;
 }
 
-.about-overlay h1{
-    font-size:4rem;
-    margin:15px 0;
+/* ============================================================
+   HERO SECTION
+============================================================ */
+
+.pa-hero {
+  position: relative;
+
+  min-height: 500px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+
+  background: var(--pa-navy);
 }
 
-.about-intro{
-    padding:100px 8%;
+/* Hero copy */
+
+.pa-hero-copy {
+  position: relative;
+  z-index: 3;
+
+  padding: 70px 8% 75px 15%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: var(--pa-white);
+  background: var(--pa-navy);
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
+/* Angled edge between text and photograph */
+
+.pa-hero-copy::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: -135px;
+  bottom: 0;
+  z-index: -1;
+
+  width: 235px;
+
+  background: var(--pa-navy);
+
+  clip-path: polygon(
+    0 0,
+    58% 0,
+    100% 100%,
+    0 100%
+  );
 }
 
-.container h2{
-    color:#082567;
-    font-size:3rem;
-    margin-bottom:25px;
+.pa-kicker {
+  display: inline-block;
+
+  color: var(--pa-gold);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
 }
 
-.container p{
-    color:#666;
-    line-height:2;
-    font-size:1.1rem;
+.pa-hero-copy h1 {
+  max-width: 650px;
+
+  margin: 17px 0 15px;
+
+  color: var(--pa-white);
+
+  font-size: clamp(2.8rem, 4.3vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -2.8px;
+  line-height: 0.98;
 }
 
-.vision-mission{
-    max-width:1200px;
-    margin:auto;
+.pa-hero-copy > p {
+  max-width: 580px;
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
+  margin: 0 0 25px;
 
-    gap:30px;
+  color: rgba(255, 255, 255, 0.9);
 
-    padding:0 8% 100px;
+  font-size: 1rem;
+  line-height: 1.62;
 }
 
-.box{
-    background:#fff;
+/* Main buttons */
 
-    padding:50px;
+.pa-button {
+  min-height: 46px;
+  padding: 11px 21px;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 
-    border-top:5px solid #8B1E3F;
+  color: var(--pa-navy);
+  background: var(--pa-gold);
+
+  border: 1px solid var(--pa-gold);
+  border-radius: 30px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.box h3{
-    color:#082567;
-    margin-bottom:20px;
+.pa-button:hover {
+  color: var(--pa-navy);
+  background: var(--pa-gold-light);
+  border-color: var(--pa-gold-light);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-3px);
 }
 
-.chairman-section{
-    display:grid;
-    grid-template-columns:1fr 1fr;
+.pa-button svg {
+  width: 18px;
+  height: 18px;
 
-    align-items:center;
-
-    max-width:1300px;
-    margin:auto;
-
-    padding:100px 8%;
-
-    gap:60px;
+  transition: transform 0.25s ease;
 }
 
-.chairman-image img{
-    width:100%;
-    border-radius:15px;
+.pa-button:hover svg {
+  transform: translateX(4px);
 }
 
-.chairman-content span{
-    color:#8B1E3F;
-    font-weight:700;
+/* Hero motto */
+
+.pa-hero-copy > small {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
 }
 
-.chairman-content h2{
-    color:#082567;
-    margin:15px 0 25px;
-    font-size:3rem;
+.pa-hero-copy > small span {
+  color: var(--pa-gold);
 }
 
-.chairman-content p{
-    line-height:2;
-    color:#666;
+/* Hero photograph */
+
+.pa-hero-photo {
+  min-width: 0;
+  min-height: 500px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.teachers-section{
-    position:relative;
-    height:500px;
-    overflow:hidden;
+/* ============================================================
+   FLOATING STATISTICS
+============================================================ */
+
+.pa-statistics {
+  position: absolute;
+  right: 15%;
+  bottom: -34px;
+  z-index: 10;
+
+  width: min(760px, 52%);
+  min-height: 88px;
+
+  padding: 13px 19px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+
+  background: var(--pa-white);
+  border: 1px solid rgba(6, 28, 56, 0.07);
+  border-radius: 12px;
+
+  box-shadow: var(--pa-shadow);
 }
 
-.teachers-section img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.pa-statistic {
+  min-width: 0;
+  min-height: 55px;
+
+  padding: 4px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-right: 1px solid var(--pa-border);
 }
 
-.teacher-overlay{
-    position:absolute;
-    inset:0;
-
-    background:rgba(0,0,0,.45);
-
-    z-index:2;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-    color:white;
+.pa-statistic:last-child {
+  border-right: none;
 }
 
-.teacher-overlay h2{
-    font-size:3rem;
+.pa-statistic-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--pa-gold);
 }
 
-@media(max-width:768px){
+.pa-statistic-icon svg {
+  width: 31px;
+  height: 31px;
+}
 
-    .vision-mission,
-    .chairman-section{
-        grid-template-columns:1fr;
-    }
+.pa-statistic div {
+  min-width: 0;
+}
 
-    .about-overlay h1{
-        font-size:2.5rem;
-    }
+.pa-statistic strong {
+  display: block;
 
-    .container h2,
-    .chairman-content h2{
-        font-size:2rem;
-    }
+  color: var(--pa-heading);
+
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.pa-statistic small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--pa-text);
+
+  font-size: 0.59rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   SECTION LABEL
+============================================================ */
+
+.pa-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--pa-heading);
+
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.pa-section-label i {
+  width: 27px;
+  height: 2px;
+
+  display: inline-block;
+
+  background: var(--pa-gold);
+}
+
+/* ============================================================
+   OUR STORY
+============================================================ */
+
+.pa-story {
+  padding: 85px 6.5% 60px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 0.92fr)
+    minmax(340px, 1.05fr)
+    minmax(380px, 1.1fr);
+  align-items: center;
+  gap: 40px;
+
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(233, 178, 58, 0.07),
+      transparent 32%
+    ),
+    var(--pa-ivory);
+}
+
+/* Story photographs */
+
+.pa-story-visual {
+  position: relative;
+
+  min-height: 325px;
+}
+
+.pa-story-main {
+  width: 88%;
+  height: 220px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 13px;
+
+  box-shadow: 0 15px 35px rgba(6, 28, 56, 0.13);
+}
+
+.pa-story-small {
+  position: absolute;
+  right: 0;
+  bottom: 26px;
+  z-index: 2;
+
+  width: 40%;
+  height: 160px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  background: var(--pa-white);
+  border: 6px solid var(--pa-ivory);
+  border-radius: 13px;
+
+  box-shadow: 0 13px 28px rgba(6, 28, 56, 0.15);
+}
+
+.pa-handwritten-text {
+  position: absolute;
+  left: 12px;
+  bottom: 15px;
+
+  margin: 0;
+
+  color: var(--pa-navy);
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.2;
+
+  transform: rotate(-4deg);
+}
+
+.pa-handwritten-text strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 1.06rem;
+}
+
+.pa-handwritten-text::after {
+  content: "";
+
+  width: 35px;
+  height: 3px;
+  margin-top: 8px;
+
+  display: block;
+
+  background: var(--pa-gold);
+}
+
+/* Story text */
+
+.pa-story-content h2 {
+  margin: 8px 0 12px;
+
+  color: var(--pa-heading);
+
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+}
+
+.pa-story-content > p {
+  margin: 7px 0;
+
+  color: var(--pa-text);
+
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+/* Values */
+
+.pa-values {
+  margin-top: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.pa-value {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.pa-value-icon {
+  width: 47px;
+  height: 47px;
+
+  flex: 0 0 47px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--pa-white);
+  background: var(--pa-burgundy);
+
+  border-radius: 50%;
+
+  box-shadow: 0 7px 18px rgba(139, 30, 63, 0.18);
+}
+
+.pa-value-icon.gold {
+  color: var(--pa-white);
+  background: var(--pa-gold);
+
+  box-shadow: 0 7px 18px rgba(233, 178, 58, 0.22);
+}
+
+.pa-value-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.pa-value div {
+  min-width: 0;
+}
+
+.pa-value strong {
+  display: block;
+
+  color: var(--pa-heading);
+
+  font-size: 0.77rem;
+  font-weight: 800;
+}
+
+.pa-value small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--pa-text);
+
+  font-size: 0.59rem;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   VISION AND MISSION
+============================================================ */
+
+.pa-purpose {
+  padding-left: 25px;
+
+  display: grid;
+  gap: 15px;
+
+  border-left: 1px solid rgba(6, 28, 56, 0.13);
+}
+
+.pa-purpose-card {
+  position: relative;
+
+  min-height: 136px;
+  padding: 20px 50px 19px 18px;
+
+  display: grid;
+  grid-template-columns: 28px 62px minmax(0, 1fr);
+  align-items: flex-start;
+  gap: 16px;
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(6, 28, 56, 0.1);
+  border-radius: 11px;
+
+  box-shadow: 0 10px 25px rgba(6, 28, 56, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pa-purpose-card:hover {
+  background: var(--pa-white);
+  border-color: rgba(139, 30, 63, 0.2);
+
+  box-shadow: 0 17px 35px rgba(6, 28, 56, 0.1);
+
+  transform: translateY(-4px);
+}
+
+.pa-purpose-number {
+  padding-top: 4px;
+
+  color: var(--pa-gold);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.pa-purpose-icon {
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--pa-burgundy);
+  background: rgba(139, 30, 63, 0.09);
+
+  border-radius: 50%;
+}
+
+.pa-purpose-icon svg {
+  width: 33px;
+  height: 33px;
+}
+
+.pa-purpose-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pa-purpose-content h3 {
+  margin: 2px 0 7px;
+
+  color: var(--pa-heading);
+
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pa-purpose-content p {
+  margin: 0;
+
+  color: var(--pa-text);
+
+  font-size: 0.74rem;
+  line-height: 1.48;
+}
+
+.pa-purpose-quote {
+  position: absolute;
+  top: -2px;
+  right: 17px;
+
+  color: rgba(6, 28, 56, 0.07);
+
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ============================================================
+   SCHOOL ADMINISTRATION
+============================================================ */
+
+.pa-leadership {
+  padding: 58px 6.5%;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.83fr) minmax(0, 2.17fr);
+  align-items: end;
+  gap: 40px;
+
+  background: var(--pa-white);
+}
+
+.pa-leadership-introduction h2 {
+  margin: 9px 0 12px;
+
+  color: var(--pa-heading);
+
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.08;
+}
+
+.pa-leadership-introduction > p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--pa-text);
+
+  font-size: 0.77rem;
+  line-height: 1.55;
+}
+
+/* Administration cards */
+
+.pa-leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pa-leader-card {
+  background: var(--pa-navy);
+  border-top: 4px solid var(--pa-gold);
+  border-radius: 6px;
+
+  box-shadow: 0 11px 28px rgba(6, 28, 56, 0.14);
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pa-leader-card:hover {
+  border-top-color: var(--pa-burgundy);
+
+  box-shadow: 0 20px 40px rgba(6, 28, 56, 0.2);
+
+  transform: translateY(-7px);
+}
+
+.pa-leader-image {
+  height: 180px;
+
+  overflow: hidden;
+
+  background: #e6e8eb;
+}
+
+.pa-leader-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition: transform 0.45s ease;
+}
+
+.pa-leader-card:hover .pa-leader-image img {
+  transform: scale(1.045);
+}
+
+.pa-leader-information {
+  min-height: 63px;
+  padding: 10px 8px 11px;
+
+  color: var(--pa-white);
+  text-align: center;
+}
+
+.pa-leader-information h3 {
+  margin: 0;
+
+  color: var(--pa-white);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.pa-leader-information > span {
+  display: block;
+
+  margin-top: 1px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.66rem;
+}
+
+.pa-leader-information p {
+  margin: 4px 0 0;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.65rem;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   HEAD TEACHER'S MESSAGE
+============================================================ */
+
+.pa-message {
+  min-height: 195px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(310px, 36%)
+    minmax(450px, 47%)
+    minmax(190px, 17%);
+
+  color: var(--pa-white);
+  background: var(--pa-burgundy);
+}
+
+/* Head Teacher photograph */
+
+.pa-headteacher-photo {
+  position: relative;
+
+  min-height: 195px;
+
+  background: #e2e2e2;
+
+  overflow: hidden;
+}
+
+.pa-headteacher-photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      rgba(139, 30, 63, 0.25) 100%
+    );
+}
+
+.pa-headteacher-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Message content */
+
+.pa-message-content {
+  position: relative;
+
+  padding: 25px 40px;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--pa-burgundy-light) 0%,
+      var(--pa-burgundy) 65%,
+      var(--pa-burgundy-dark) 100%
+    );
+}
+
+.pa-message-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.pa-message-label i {
+  width: 28px;
+  height: 2px;
+
+  display: inline-block;
+
+  background: var(--pa-gold);
+}
+
+.pa-message-body {
+  margin-top: 13px;
+
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.pa-large-quote {
+  color: var(--pa-gold);
+
+  font-family: Georgia, serif;
+  font-size: 5.4rem;
+  font-weight: 700;
+  line-height: 0.68;
+}
+
+.pa-message-body p {
+  margin: 0 0 12px;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 0.75rem;
+  line-height: 1.52;
+}
+
+.pa-message-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.pa-message-author strong {
+  color: var(--pa-white);
+
+  font-size: 0.71rem;
+}
+
+.pa-message-author small {
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.62rem;
+}
+
+/* Message brand panel */
+
+.pa-message-brand {
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  color: rgba(255, 255, 255, 0.3);
+  background:
+    linear-gradient(
+      135deg,
+      var(--pa-burgundy-dark),
+      #551027
+    );
+}
+
+.pa-message-brand > svg {
+  width: 65px;
+  height: 65px;
+
+  flex: 0 0 65px;
+}
+
+.pa-message-brand p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.pa-message-brand strong {
+  display: block;
+
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   PROFESSIONAL TEACHERS BANNER
+============================================================ */
+
+.pa-teachers {
+  position: relative;
+
+  min-height: 135px;
+
+  color: var(--pa-white);
+
+  background-position: center 42%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.pa-teachers-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 28, 56, 0.97) 0%,
+      rgba(6, 28, 56, 0.78) 22%,
+      rgba(6, 28, 56, 0.25) 56%,
+      rgba(6, 28, 56, 0.45) 78%,
+      rgba(6, 28, 56, 0.9) 100%
+    );
+}
+
+.pa-teachers-content {
+  position: absolute;
+  top: 50%;
+  left: 6.5%;
+  z-index: 2;
+
+  transform: translateY(-50%);
+}
+
+.pa-teachers-content h2 {
+  margin: 0 0 12px;
+
+  color: var(--pa-white);
+
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+}
+
+.pa-small-button {
+  min-height: 33px;
+  padding: 7px 13px;
+
+  gap: 8px;
+
+  font-size: 0.61rem;
+}
+
+.pa-small-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.pa-teachers-quote {
+  position: absolute;
+  top: 25px;
+  right: 7%;
+  z-index: 2;
+
+  margin: 0;
+
+  color: var(--pa-white);
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.18;
+
+  transform: rotate(-3deg);
+}
+
+.pa-teachers-quote strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 1.15rem;
+}
+
+.pa-teachers-quote::after {
+  content: "";
+
+  width: 38px;
+  height: 3px;
+  margin-top: 9px;
+
+  display: block;
+
+  background: var(--pa-gold);
+}
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+.pa-button:focus-visible {
+  outline: 3px solid var(--pa-white);
+  outline-offset: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE — LARGE LAPTOP
+============================================================ */
+
+@media (max-width: 1300px) {
+  .pa-hero-copy {
+    padding-left: 9%;
+  }
+
+  .pa-statistics {
+    right: 7%;
+    width: 58%;
+  }
+
+  .pa-story {
+    padding-right: 4.5%;
+    padding-left: 4.5%;
+
+    grid-template-columns:
+      minmax(250px, 0.82fr)
+      minmax(310px, 1fr)
+      minmax(350px, 1.08fr);
+
+    gap: 30px;
+  }
+
+  .pa-values {
+    gap: 10px;
+  }
+
+  .pa-value {
+    gap: 7px;
+  }
+
+  .pa-value-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .pa-value-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .pa-leadership {
+    padding-right: 4.5%;
+    padding-left: 4.5%;
+
+    grid-template-columns: 0.76fr 2.24fr;
+    gap: 30px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL LAPTOP
+============================================================ */
+
+@media (max-width: 1100px) {
+  .pa-hero {
+    grid-template-columns: 48% 52%;
+  }
+
+  .pa-hero-copy {
+    padding: 60px 7%;
+  }
+
+  .pa-hero-copy::after {
+    right: -100px;
+    width: 180px;
+  }
+
+  .pa-hero-copy h1 {
+    font-size: 3.2rem;
+  }
+
+  .pa-statistics {
+    right: 5%;
+    width: 72%;
+  }
+
+  .pa-story {
+    padding-top: 90px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pa-story-visual {
+    min-height: 340px;
+  }
+
+  .pa-purpose {
+    grid-column: 1 / -1;
+
+    padding-left: 0;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-left: none;
+  }
+
+  .pa-leadership {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-leadership-introduction > p {
+    max-width: 700px;
+  }
+
+  .pa-leader-image {
+    height: 220px;
+  }
+
+  .pa-message {
+    grid-template-columns:
+      minmax(280px, 33%)
+      minmax(420px, 50%)
+      minmax(160px, 17%);
+  }
+
+  .pa-message-content {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .pa-message-brand {
+    padding: 18px;
+    flex-direction: column;
+    gap: 8px;
+
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+============================================================ */
+
+@media (max-width: 850px) {
+  .pa-hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+  }
+
+  .pa-hero-copy {
+    min-height: 430px;
+    padding: 65px 8% 75px;
+  }
+
+  .pa-hero-copy::after {
+    display: none;
+  }
+
+  .pa-hero-copy h1 {
+    font-size: clamp(2.8rem, 8vw, 4rem);
+  }
+
+  .pa-hero-photo {
+    min-height: 390px;
+  }
+
+  .pa-statistics {
+    position: relative;
+    right: auto;
+    bottom: auto;
+
+    width: 90%;
+    margin: -42px auto 0;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pa-statistic {
+    padding: 12px 18px;
+
+    border-right: none;
+    border-bottom: 1px solid var(--pa-border);
+  }
+
+  .pa-statistic:nth-child(1),
+  .pa-statistic:nth-child(3) {
+    border-right: 1px solid var(--pa-border);
+  }
+
+  .pa-statistic:nth-child(3),
+  .pa-statistic:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .pa-story {
+    padding: 70px 7% 55px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .pa-story-visual {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .pa-story-content {
+    max-width: 700px;
+  }
+
+  .pa-purpose {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .pa-leadership {
+    padding: 60px 7%;
+  }
+
+  .pa-leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pa-leader-image {
+    height: 300px;
+  }
+
+  .pa-message {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pa-headteacher-photo {
+    min-height: 360px;
+  }
+
+  .pa-message-content {
+    min-height: 360px;
+    padding: 42px 35px;
+  }
+
+  .pa-message-brand {
+    grid-column: 1 / -1;
+
+    min-height: 130px;
+
+    flex-direction: row;
+  }
+
+  .pa-teachers {
+    min-height: 220px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+  .pa-hero-copy {
+    min-height: 440px;
+    padding: 55px 6% 70px;
+  }
+
+  .pa-kicker {
+    font-size: 0.69rem;
+  }
+
+  .pa-hero-copy h1 {
+    margin-top: 14px;
+
+    font-size: 2.6rem;
+    letter-spacing: -1.7px;
+  }
+
+  .pa-hero-copy > p {
+    font-size: 0.92rem;
+  }
+
+  .pa-hero-copy > small {
+    gap: 6px;
+
+    font-size: 0.51rem;
+  }
+
+  .pa-hero-photo {
+    min-height: 320px;
+  }
+
+  .pa-statistics {
+    width: 88%;
+    margin-top: -35px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .pa-statistic,
+  .pa-statistic:nth-child(1),
+  .pa-statistic:nth-child(3) {
+    min-height: 67px;
+
+    border-right: none;
+    border-bottom: 1px solid var(--pa-border);
+  }
+
+  .pa-statistic:last-child {
+    border-bottom: none;
+  }
+
+  .pa-story {
+    padding: 65px 6% 50px;
+  }
+
+  .pa-story-visual {
+    min-height: 325px;
+  }
+
+  .pa-story-main {
+    width: 100%;
+    height: 225px;
+  }
+
+  .pa-story-small {
+    width: 46%;
+    height: 145px;
+  }
+
+  .pa-story-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .pa-story-content > p {
+    font-size: 0.84rem;
+  }
+
+  .pa-values {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .pa-value small {
+    font-size: 0.67rem;
+  }
+
+  .pa-purpose-card {
+    padding: 22px 24px 22px 16px;
+
+    grid-template-columns: 25px 55px minmax(0, 1fr);
+
+    gap: 11px;
+  }
+
+  .pa-purpose-icon {
+    width: 53px;
+    height: 53px;
+  }
+
+  .pa-purpose-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pa-purpose-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .pa-purpose-content p {
+    font-size: 0.72rem;
+  }
+
+  .pa-purpose-quote {
+    display: none;
+  }
+
+  .pa-leadership {
+    padding: 55px 6%;
+  }
+
+  .pa-leadership-introduction h2 {
+    font-size: 2.3rem;
+  }
+
+  .pa-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-leader-image {
+    height: 390px;
+  }
+
+  .pa-leader-information {
+    min-height: 75px;
+    padding: 13px 10px;
+  }
+
+  .pa-leader-information h3 {
+    font-size: 0.94rem;
+  }
+
+  .pa-leader-information p {
+    font-size: 0.72rem;
+  }
+
+  .pa-message {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-headteacher-photo {
+    min-height: 390px;
+  }
+
+  .pa-message-content {
+    min-height: auto;
+    padding: 40px 6%;
+  }
+
+  .pa-message-body {
+    grid-template-columns: 41px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .pa-large-quote {
+    font-size: 4.2rem;
+  }
+
+  .pa-message-body p {
+    font-size: 0.78rem;
+  }
+
+  .pa-message-brand {
+    grid-column: auto;
+
+    padding: 27px;
+  }
+
+  .pa-teachers {
+    min-height: 290px;
+
+    background-position: 42% center;
+  }
+
+  .pa-teachers-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(6, 28, 56, 0.96) 0%,
+        rgba(6, 28, 56, 0.79) 47%,
+        rgba(6, 28, 56, 0.15) 100%
+      );
+  }
+
+  .pa-teachers-content {
+    top: auto;
+    right: 6%;
+    bottom: 27px;
+    left: 6%;
+
+    transform: none;
+  }
+
+  .pa-teachers-content h2 {
+    font-size: 1.65rem;
+  }
+
+  .pa-teachers-quote {
+    display: none;
+  }
+}
+
+/* ============================================================
+   VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 390px) {
+  .pa-hero-copy h1 {
+    font-size: 2.2rem;
+  }
+
+  .pa-story-visual {
+    min-height: 300px;
+  }
+
+  .pa-story-main {
+    height: 210px;
+  }
+
+  .pa-story-small {
+    bottom: 28px;
+
+    height: 125px;
+  }
+
+  .pa-handwritten-text {
+    font-size: 0.79rem;
+  }
+
+  .pa-handwritten-text strong {
+    font-size: 0.9rem;
+  }
+
+  .pa-purpose-card {
+    grid-template-columns: 22px 1fr;
+  }
+
+  .pa-purpose-icon {
+    display: none;
+  }
+
+  .pa-leader-image {
+    height: 340px;
+  }
+
+  .pa-message-body {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-large-quote {
+    height: 35px;
+
+    font-size: 4.4rem;
+  }
 }
