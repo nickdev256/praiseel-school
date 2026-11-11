@@ -1,0 +1,269 @@
+/* ============================================================
+   APPLY — HERO   (tokens come from ApplyOnline.css → .ap)
+============================================================ */
+
+.ap-hero {
+  position: relative;
+  isolation: isolate;
+  padding: 180px 0 150px;
+  color: var(--on-dark);
+  background: var(--ink-deep);
+}
+
+.ap-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(244, 180, 0, 0.18), transparent 35%),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0) 0 0 / 26px 26px,
+    linear-gradient(
+      100deg,
+      rgba(6, 20, 51, 0.96) 0%,
+      rgba(11, 31, 77, 0.9) 50%,
+      rgba(11, 31, 77, 0.8) 100%
+    ),
+    var(--ap-hero-bg) center / cover no-repeat;
+  animation: apZoom 18s ease-out both;
+}
+
+.ap-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.ap-hero-copy {
+  animation: apRise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.ap-crumbs {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  color: var(--on-dark-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.ap-crumbs a:hover {
+  color: var(--gold);
+}
+
+.ap-crumbs [aria-current] {
+  color: var(--gold-soft);
+}
+
+.ap-pill {
+  padding: 9px 18px 9px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-soft);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ap-pulse {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.ap-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: apPulse 1.8s ease-out infinite;
+}
+
+@keyframes apPulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.ap-hero h1 {
+  margin: 24px 0 22px;
+  color: #fff;
+  font-size: clamp(2.6rem, 5.6vw, 5rem);
+  line-height: 1;
+}
+
+.ap-hero h1 em {
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.ap-hero-copy > p {
+  max-width: 560px;
+  font-size: clamp(1.02rem, 1.3vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.ap-hero-actions {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+}
+
+.ap-hero-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff !important;
+  font-weight: 800;
+}
+
+.ap-hero-call > svg {
+  width: 44px;
+  height: 44px;
+  padding: 13px;
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.ap-hero-call small {
+  display: block;
+  color: var(--on-dark-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* checklist card */
+
+.ap-hero-card {
+  position: relative;
+  padding: 28px;
+  color: var(--text);
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.55);
+  animation: apRise 1s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.ap-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  z-index: -1;
+  border: 1px solid rgba(244, 180, 0, 0.45);
+  border-radius: 34px;
+}
+
+.ap-hero-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ap-hero-card-top > span {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--gold);
+  border-radius: 16px;
+  font-size: 1.3rem;
+}
+
+.ap-hero-card-top small {
+  display: block;
+  color: var(--berry);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ap-hero-card-top strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.ap-hero-card ul {
+  margin: 20px 0 16px;
+  padding: 18px 0;
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ap-hero-card li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.ap-hero-card li svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  padding: 5px;
+  color: #fff;
+  background: var(--berry);
+  border-radius: 50%;
+}
+
+.ap-hero-card > p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .ap-hero {
+    padding-top: 130px;
+  }
+
+  .ap-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ap-hero-card {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ap-hero {
+    padding-bottom: 120px;
+  }
+
+  .ap-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .ap-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ap-hero-card {
+    padding: 22px;
+  }
+}

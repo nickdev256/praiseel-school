@@ -1,0 +1,619 @@
+/* ============================================================
+   APPLY — APPLICATION FORM   (tokens come from ApplyOnline.css → .ap)
+============================================================ */
+
+.apf-grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: start;
+  gap: 24px;
+}
+
+/* ---------- side panel ---------- */
+
+.apf-side {
+  position: sticky;
+  top: 110px;
+  padding: clamp(28px, 4vw, 44px);
+  overflow: hidden;
+  color: var(--on-dark);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0) 0 0 / 26px 26px,
+    linear-gradient(160deg, var(--ink-deep), var(--ink) 65%, var(--ink-soft));
+  border-radius: var(--radius);
+}
+
+.apf-side h2 {
+  margin: 16px 0 12px;
+  color: #fff;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.06;
+}
+
+.apf-side h2 em {
+  color: var(--gold);
+}
+
+.apf-side > p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.apf-progress {
+  position: relative;
+  margin-top: 28px;
+  display: grid;
+  gap: 6px;
+}
+
+.apf-progress li > div,
+.apf-progress li > button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--on-dark-soft);
+  background: transparent;
+  border: 0;
+  border-radius: 16px;
+  font: 700 1rem var(--sans);
+  text-align: left;
+}
+
+.apf-progress li > button {
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.apf-progress li > button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.apf-progress small {
+  display: block;
+  color: var(--on-dark-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.apf-dot {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.apf-progress li.is-current > div {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.apf-progress li.is-current .apf-dot {
+  color: var(--ink);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.apf-progress li.is-done > button {
+  color: #fff;
+}
+
+.apf-progress li.is-done .apf-dot {
+  color: var(--ink);
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+  font-size: 0.8rem;
+}
+
+/* ---------- card ---------- */
+
+.apf-card {
+  position: relative;
+  padding: clamp(24px, 4vw, 44px);
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.apf-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: var(--sand);
+}
+
+.apf-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--berry));
+  transition: width 0.4s ease;
+}
+
+.apf-head {
+  margin: 6px 0 26px;
+}
+
+.apf-head small {
+  color: var(--berry);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.apf-head h3 {
+  margin-top: 6px;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.apf-head h3:focus {
+  outline: none;
+}
+
+/* ---------- fields ---------- */
+
+.apf-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+  animation: apRise 0.35s ease;
+}
+
+.apf-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.apf-field.span-2 {
+  grid-column: 1 / -1;
+}
+
+.apf-field label {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.apf-req {
+  color: var(--berry);
+}
+
+.apf-optional {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.apf-field input,
+.apf-field select,
+.apf-field textarea {
+  width: 100%;
+  padding: 0 16px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1.5px solid rgba(11, 31, 77, 0.18);
+  border-radius: 14px;
+  font: 500 1rem var(--sans);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.apf-field input,
+.apf-field select {
+  height: 52px;
+}
+
+.apf-field textarea {
+  min-height: 130px;
+  padding: 14px 16px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.apf-field select {
+  padding-right: 44px;
+  appearance: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--berry) 50%),
+    linear-gradient(135deg, var(--berry) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.apf-field input::placeholder,
+.apf-field textarea::placeholder {
+  color: #6b7486;
+}
+
+.apf-field input:hover,
+.apf-field select:hover,
+.apf-field textarea:hover {
+  border-color: rgba(11, 31, 77, 0.35);
+}
+
+.apf-field input:focus,
+.apf-field select:focus,
+.apf-field textarea:focus {
+  background-color: #fff;
+  border-color: var(--ink);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(244, 180, 0, 0.35);
+}
+
+.apf-field.has-error input,
+.apf-field.has-error select,
+.apf-field.has-error textarea {
+  background-color: #fff6f8;
+  border-color: var(--berry);
+}
+
+.apf-error,
+.apf-hint {
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.apf-error {
+  color: var(--berry);
+}
+
+.apf-error::before {
+  content: "! ";
+  font-weight: 800;
+}
+
+.apf-hint {
+  color: var(--muted);
+}
+
+.apf-note {
+  padding: 14px 16px;
+  color: var(--ink);
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+/* ---------- documents ---------- */
+
+.apf-docs {
+  display: grid;
+  gap: 12px;
+  animation: apRise 0.35s ease;
+}
+
+.apf-file {
+  position: relative;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  background: var(--cream);
+  border: 1.5px dashed rgba(11, 31, 77, 0.25);
+  border-radius: 16px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.apf-file:hover {
+  border-color: var(--ink);
+}
+
+.apf-file.has-file {
+  background: #f1faf4;
+  border-style: solid;
+  border-color: rgba(15, 122, 63, 0.4);
+}
+
+.apf-file.has-error {
+  border-color: var(--berry);
+}
+
+.apf-file-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--berry);
+  background: var(--sand);
+  border-radius: 12px;
+}
+
+.apf-file.has-file .apf-file-icon {
+  color: #fff;
+  background: var(--wa-dark);
+}
+
+.apf-file-text {
+  min-width: 0;
+}
+
+.apf-file-text strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.apf-file-text small {
+  display: block;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.apf-file.has-error .apf-file-text small {
+  color: var(--berry);
+}
+
+.apf-file-pick,
+.apf-file-clear {
+  position: relative;
+  z-index: 2;
+  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  font: 700 0.88rem var(--sans);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.apf-file-pick {
+  color: #fff;
+  background: var(--ink);
+}
+
+.apf-file-clear {
+  color: var(--berry);
+  background: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(139, 30, 63, 0.35);
+}
+
+/* the real input is visually hidden but still keyboard-focusable */
+.apf-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.apf-file:focus-within {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 4px rgba(244, 180, 0, 0.35);
+}
+
+/* ---------- review ---------- */
+
+.apf-review {
+  display: grid;
+  gap: 14px;
+  animation: apRise 0.35s ease;
+}
+
+.apf-review-block {
+  padding: 18px 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.apf-review-head {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apf-review-head h4 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.apf-review-head button {
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: 700 0.84rem var(--sans);
+  cursor: pointer;
+}
+
+.apf-review-head button:hover {
+  background: var(--gold-soft);
+}
+
+.apf-review-head button svg {
+  color: var(--berry);
+  font-size: 0.75rem;
+}
+
+.apf-review dl div {
+  padding: 8px 0;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.apf-review dt {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.apf-review dd {
+  color: var(--ink);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.apf-consent {
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 6px 12px;
+  background: #fff;
+  border: 1.5px solid rgba(11, 31, 77, 0.18);
+  border-radius: 16px;
+}
+
+.apf-consent.has-error {
+  background: #fff6f8;
+  border-color: var(--berry);
+}
+
+.apf-consent input {
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  accent-color: var(--berry);
+  cursor: pointer;
+}
+
+.apf-consent label {
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.apf-consent .apf-error {
+  grid-column: 2;
+}
+
+.apf-submit-error {
+  padding: 14px 16px;
+  color: var(--berry);
+  background: #fff6f8;
+  border: 1px solid rgba(139, 30, 63, 0.3);
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+/* ---------- actions ---------- */
+
+.apf-actions {
+  margin-top: 30px;
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.apf-actions .ap-btn-navy,
+.apf-actions .ap-btn-berry {
+  margin-left: auto;
+}
+
+.apf-actions .ap-btn-plain {
+  gap: 10px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 960px) {
+  .apf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apf-side {
+    position: static;
+  }
+
+  .apf-progress {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .apf-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .apf-progress {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .apf-progress li > div,
+  .apf-progress li > button {
+    padding: 8px;
+    gap: 10px;
+    font-size: 0.88rem;
+  }
+
+  .apf-dot {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .apf-file {
+    grid-template-columns: auto 1fr;
+  }
+
+  .apf-file-pick,
+  .apf-file-clear {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .apf-review dl div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .apf-actions {
+    flex-direction: column-reverse;
+  }
+
+  .apf-actions .ap-btn-navy,
+  .apf-actions .ap-btn-berry {
+    margin-left: 0;
+  }
+
+  .apf-actions .ap-btn-plain {
+    justify-content: center;
+  }
+}

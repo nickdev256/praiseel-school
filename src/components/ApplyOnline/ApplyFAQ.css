@@ -1,0 +1,124 @@
+/* ============================================================
+   APPLY — FAQ   (tokens come from ApplyOnline.css → .ap)
+============================================================ */
+
+.apq {
+  background: var(--paper);
+}
+
+.apq-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.apq-intro h2 {
+  margin: 16px 0 16px;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.06;
+}
+
+.apq-intro > p {
+  margin-bottom: 28px;
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.apq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.apq-item {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.apq-item.is-open {
+  background: var(--paper);
+  border-color: rgba(139, 30, 63, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.apq-item h3 {
+  font-family: var(--sans);
+  letter-spacing: 0;
+}
+
+.apq-item button {
+  width: 100%;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  font: 700 1.04rem var(--sans);
+  text-align: left;
+  cursor: pointer;
+}
+
+.apq-item button i {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--sand);
+  border-radius: 50%;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.apq-item.is-open button i {
+  background: var(--gold);
+  transform: rotate(180deg);
+}
+
+.apq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.apq-item.is-open .apq-answer {
+  grid-template-rows: 1fr;
+}
+
+.apq-answer > div {
+  overflow: hidden;
+}
+
+.apq-answer p {
+  padding: 0 24px 22px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .apq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .apq-item button {
+    padding: 18px;
+    font-size: 0.98rem;
+  }
+
+  .apq-answer p {
+    padding: 0 18px 18px;
+  }
+}

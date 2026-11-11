@@ -1,0 +1,268 @@
+/* ============================================================
+   PRAISE-EL JUNIOR SCHOOL — APPLY ONLINE PAGE (shared styles)
+   Base rules use :where() (zero specificity) so every component's
+   own styles always win, whatever order the CSS files load in.
+   Same design system as Home, About, Admissions, Contact & Gallery.
+   All text/background pairs meet WCAG AA contrast (4.5:1+).
+============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ap {
+  --ink: #0b1f4d;
+  --ink-deep: #061433;
+  --ink-soft: #1a3478;
+  --gold: #f4b400;
+  --gold-soft: #ffe199;
+  --berry: #8b1e3f;
+  --berry-dark: #6c1530;
+  --cream: #fbf7ef;
+  --sand: #f3ecdd;
+  --paper: #ffffff;
+  --text: #3a4456;
+  --muted: #556074;
+  --on-dark: rgba(255, 255, 255, 0.9);
+  --on-dark-soft: rgba(255, 255, 255, 0.8);
+  --wa: #25d366;
+  --wa-dark: #0f7a3f;
+  --line: rgba(11, 31, 77, 0.1);
+  --shadow: 0 30px 60px -25px rgba(11, 31, 77, 0.35);
+  --radius: 28px;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --space: clamp(72px, 10vw, 120px);
+
+  width: 100%;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--cream);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(.ap) *,
+:where(.ap) *::before,
+:where(.ap) *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:where(.ap) img {
+  max-width: 100%;
+  display: block;
+}
+
+:where(.ap) ul,
+:where(.ap) ol {
+  list-style: none;
+}
+
+:where(.ap) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.ap) :is(h1, h2, h3, h4) {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+:where(.ap) em {
+  color: var(--berry);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ap a:focus-visible,
+.ap button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.ap-container {
+  width: min(1240px, 90%);
+  margin: 0 auto;
+}
+
+.ap-section {
+  padding: var(--space) 0;
+}
+
+.ap-form-area {
+  scroll-margin-top: 90px;
+}
+
+/* ---------- headings ---------- */
+
+.ap-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--berry);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ap-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+}
+
+.ap-eyebrow.light {
+  color: var(--gold);
+}
+
+.ap-heading {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.ap-heading h2 {
+  margin: 16px 0 14px;
+  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  line-height: 1.06;
+}
+
+.ap-heading p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ---------- buttons ---------- */
+
+.ap-btn {
+  width: fit-content;
+  padding: 8px 8px 8px 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border: 0;
+  border-radius: 999px;
+  font: 700 0.98rem var(--sans);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.ap-btn i {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: transform 0.35s ease;
+}
+
+.ap-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.ap-btn:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.ap-btn-gold {
+  color: var(--ink) !important;
+  background: var(--gold);
+}
+
+.ap-btn-gold i {
+  color: var(--gold);
+  background: var(--ink);
+}
+
+.ap-btn-navy {
+  color: #fff !important;
+  background: var(--ink);
+}
+
+.ap-btn-navy i {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.ap-btn-berry {
+  color: #fff !important;
+  background: var(--berry);
+}
+
+.ap-btn-berry:hover:not(:disabled) {
+  background: var(--berry-dark);
+}
+
+.ap-btn-berry i {
+  color: var(--berry);
+  background: #fff;
+}
+
+.ap-btn-whatsapp {
+  color: #fff !important;
+  background: var(--wa-dark);
+}
+
+.ap-btn-whatsapp i {
+  color: var(--wa-dark);
+  background: #fff;
+  font-size: 1.2rem;
+}
+
+.ap-btn-plain {
+  padding: 14px 22px;
+  color: var(--ink) !important;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+.ap-btn-plain:hover:not(:disabled) {
+  background: var(--sand);
+}
+
+/* ---------- animation ---------- */
+
+@keyframes apRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes apZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .ap-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ap *,
+  .ap *::before,
+  .ap *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,554 @@
+/* ============================================================
+   PRAISE-EL JUNIOR SCHOOL — NAVBAR
+   Floats over each page hero (fixed position).
+   Footprint: ~132px on desktop, ~84px below 992px —
+   give each page hero at least that much top padding.
+============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
+.nb {
+  --ink: #0b1f4d;
+  --ink-deep: #061433;
+  --gold: #f4b400;
+  --gold-soft: #ffe199;
+  --berry: #8b1e3f;
+  --cream: #fbf7ef;
+  --sand: #f3ecdd;
+  --muted: #556074;
+  --line: rgba(11, 31, 77, 0.1);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  font-family: var(--sans);
+  pointer-events: none;
+}
+
+.nb *,
+.nb *::before,
+.nb *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nb a:focus-visible,
+.nb button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* ============================================================
+   TOP BAR
+============================================================ */
+
+.nb-topbar {
+  position: relative;
+  z-index: 3;
+  height: 44px;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(6, 20, 51, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.nb-topbar-inner {
+  width: min(1400px, 94%);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nb-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-width: 0;
+}
+
+.nb-topbar-left a,
+.nb-topbar-left span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nb-topbar-left svg {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.nb-topbar-left a:hover {
+  color: var(--gold-soft);
+}
+
+.nb-topbar-chip {
+  padding: 5px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink) !important;
+  background: var(--gold);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.nb-topbar-chip:hover {
+  background: var(--gold-soft);
+}
+
+.nb-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  background: var(--berry);
+  border-radius: 50%;
+}
+
+.nb-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--berry);
+  border-radius: 50%;
+  animation: nbPulse 1.8s ease-out infinite;
+}
+
+/* ============================================================
+   MAIN BAR
+============================================================ */
+
+.nb-bar {
+  position: relative;
+  z-index: 3;
+  width: min(1400px, 96%);
+  height: 80px;
+  margin: 8px auto 0;
+  padding: 0 12px 0 18px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px -20px rgba(6, 20, 51, 0.45);
+  backdrop-filter: blur(14px);
+  pointer-events: auto;
+  transition:
+    transform 0.35s ease,
+    height 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* brand */
+
+.nb-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.nb-brand img {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  object-fit: contain;
+  transition:
+    width 0.35s ease,
+    height 0.35s ease;
+}
+
+.nb-brand strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.nb-brand small {
+  display: block;
+  margin-top: 2px;
+  color: var(--berry);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* menu */
+
+.nb-menu {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nb-menu .nb-link {
+  position: relative;
+  padding: 10px 16px;
+  color: var(--ink);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.nb-menu .nb-link:hover {
+  background: var(--cream);
+}
+
+.nb-menu .nb-link.is-active {
+  color: var(--ink);
+  background: var(--sand);
+}
+
+.nb-menu .nb-link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: var(--berry);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* call to action */
+
+.nb-cta {
+  padding: 6px 6px 6px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink) !important;
+  background: var(--gold);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.nb-cta i {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  background: var(--ink);
+  border-radius: 50%;
+  font-size: 0.85rem;
+  transition: transform 0.35s ease;
+}
+
+.nb-cta:hover {
+  transform: translateY(-2px);
+}
+
+.nb-cta:hover i {
+  transform: rotate(-45deg);
+}
+
+/* mobile toggle */
+
+.nb-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  color: #fff;
+  background: var(--ink);
+  border: 0;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ============================================================
+   SCROLLED STATE
+============================================================ */
+
+.nb.is-scrolled .nb-topbar {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.nb.is-scrolled .nb-bar {
+  height: 68px;
+  transform: translateY(-44px);
+  box-shadow: 0 20px 50px -18px rgba(6, 20, 51, 0.5);
+}
+
+.nb.is-scrolled .nb-brand img {
+  width: 48px;
+  height: 48px;
+}
+
+/* ============================================================
+   MOBILE DRAWER
+============================================================ */
+
+.nb-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: rgba(6, 20, 51, 0.55);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s;
+}
+
+.nb-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: min(400px, 100%);
+  height: 100vh;
+  height: 100dvh;
+  padding: 104px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow-y: auto;
+  background: var(--cream);
+  box-shadow: -30px 0 60px -20px rgba(6, 20, 51, 0.4);
+  transform: translateX(100%);
+  visibility: hidden; /* removes closed drawer from tab order & screen readers */
+  pointer-events: auto;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    visibility 0.4s;
+}
+
+.nb-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nb-drawer.is-open {
+  transform: none;
+  visibility: visible;
+}
+
+.nb-drawer-links {
+  display: grid;
+  gap: 6px;
+}
+
+.nb-drawer-links .nb-link {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background 0.25s ease;
+  transition-delay: calc(var(--i) * 50ms + 80ms);
+}
+
+.nb-drawer.is-open .nb-drawer-links .nb-link {
+  opacity: 1;
+  transform: none;
+}
+
+.nb-drawer-links .nb-link svg {
+  color: var(--berry);
+  font-size: 0.85rem;
+}
+
+.nb-drawer-links .nb-link.is-active {
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.nb-drawer-links .nb-link.is-active svg {
+  color: var(--gold);
+}
+
+.nb-cta-full {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 22px;
+}
+
+.nb-drawer-contact {
+  margin-top: auto;
+  padding-top: 20px;
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.nb-drawer-contact a,
+.nb-drawer-contact span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.nb-drawer-contact svg {
+  flex: 0 0 auto;
+  color: var(--berry);
+}
+
+/* ============================================================
+   KEYFRAMES
+============================================================ */
+
+@keyframes nbPulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1240px) {
+  .nb-topbar-email {
+    display: none !important;
+  }
+
+  .nb-menu .nb-link {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .nb-brand strong {
+    font-size: 1.02rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .nb-brand small {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .nb-topbar {
+    display: none;
+  }
+
+  .nb-bar {
+    height: 70px;
+    margin-top: 12px;
+    grid-template-columns: 1fr auto;
+    padding: 0 11px 0 14px;
+  }
+
+  .nb.is-scrolled .nb-bar {
+    height: 64px;
+    transform: translateY(-4px);
+  }
+
+  .nb-menu,
+  .nb-bar > .nb-cta {
+    display: none;
+  }
+
+  .nb-toggle {
+    display: grid;
+  }
+
+  .nb-brand img {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .nb-brand small {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .nb-brand strong {
+    font-size: 0.95rem;
+  }
+
+  .nb-brand small {
+    font-size: 0.68rem;
+  }
+}
+
+@media (min-width: 993px) {
+  .nb-drawer,
+  .nb-backdrop {
+    display: none;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .nb *,
+  .nb *::before,
+  .nb *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
